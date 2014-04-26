@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1024" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <title>Usando MongoDB em suas aplicações</title>
+
+        <meta name="description" content="Apresentação feita com impress.js, Usando MongoDB em suas aplicações" />
+        <meta name="author" content="Sheldon Led" />
+
+        <link href="css/mongodb.css" rel="stylesheet" />
+
+        <link rel="shortcut icon" href="favicon.png" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    </head>
+    <body class="impress-not-supported">
+        <div class="fallback-message">
+            <p>Seu navegador <b>não suporta as funcionalidades requeridas</b> pelo impress.js, 
+                você terá uma apresentação com uma versão mais simples.</p>
+            <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+        </div>
+        <div id="impress">
+            <div id="intro" class="step slide" data-x="0" data-y="-15000">
+                <img style="background:linear-gradient(rgb(255,255,255),rgb(64,40,23));background-color:#000" src="img/logo-mongodb-header.png" alt="">
+                <p>MongoDB é uma aplicação de código aberto e de alta performance, para gerenciar e guardar informações de sua aplicação. Ele traz consigo um conceito já difundido de ser não-relacional (NoSQL) e muita facilidade no tratamento dos dados. Essa é uma apresentação introdutória, que visa mostrar de forma básica todo o universo MongoDB.</p>
+                <p id="introbottom">
+                    <span>Sheldon Led</span>
+                    <br>
+                    <a href="www.sheldonled.com">www.sheldonled.com</a>
+                </p>
+            </div>
+            <div id="resumo" class="step slide" data-x="0" data-y="-13500" data-rotate="-30" >
+                <q><strong>Porque "Mongo"?</strong></q>
+                <ul>
+                    <li><em>Humongous</em></li>
+                    <li>"Gigantesco"</li>
+                </ul>
+                <p><strong>História</strong></p>
+                <ul>
+                    <li>Criado em 2007 - Pela empresa 10gen</li>
+                    <li>Hoje 10gen é conhecida apenas como MongoDB</li>
+                </ul>
+            </div>
+            <div id="quemusa" class="step slide" data-x="0" data-y="-12000" data-rotate="-30">
+                <q><strong>Quem está usando?</strong></q>   
+                <ul>
+                    <li>Foursquare</li>   
+                    <li>Github</li>
+                    <li>bit.ly</li>
+                    <li>Easy Taxi</li>   
+                    <li>Globo.com (Cartola FC)</li>   
+                    <li>Algumas empresas em Goiânia</li>   
+                </ul>
+            </div>
+            <div id="indroducao" class="step slide" data-x="0" data-y="-10500" data-rotate="-30">
+                <q><strong>Introdução</strong></q>   
+                <ul>
+                    <li>NoSQL: Termo criado por Carlo Strozzi e Eric Evans</li>   
+                    <li>Não se opõe ao SQL, <em>'No'</em> apenas indica que é um paradigma diferente</li>
+                    <li>também conhecido como NoRel (Não Relacional)</li>
+                </ul>
+            </div>
+            <div id="pqusar" class="step slide" data-x="0" data-y="-9000" data-rotate="-30">
+                <q><strong>Por que usar?</strong></q>   
+                <ul>
+                    <li>Um novo paradigma</li>
+                    <li>Simplicidade</li>
+                    <li>
+                        Flexível
+                        <ul>
+                            <li>Criação de bancos e "tabelas" dinâmicos</li>
+                            <li>Adição de "colunas" em tabelas de forma dinâmica</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="pqusar2" class="step slide" data-x="0" data-y="-7500" data-rotate="-30">
+                <q><strong>Mais alguns motivos</strong></q>   
+                <ul>
+                    <li>Otimizado para escalabilidade</li>   
+                    <li>Rapidez na leitura e escrita de dados</li>
+                    <li>Fácil aprendizado</li>
+                </ul>
+            </div>
+            <div id="pqnusar" class="step slide" data-x="0" data-y="-6000" data-rotate="-30">
+                <p><strong>Por que não usar</strong></p>   
+                <ul>
+                    <li>
+                        Não é bom com relacionamentos
+                        <img src="img/relacionamento.jpg" alt="">
+                    </li>
+                    <li>Sem suporte nativo para transações</li>
+                    <li>Sem a funcionalidade JOIN</li>
+                </ul>
+            </div>
+            <div id="caracteristicas" class="step slide" data-x="0" data-y="-4500" data-rotate="-30">
+                <q><strong>Algumas características</strong></q>   
+                <ul>
+                    <li>Baseado em JavaScript</li>   
+                    <li>Interface (linha de comando) com sintaxe JS</li>   
+                    <li>Livre de modelagem (Schema Free)</li>
+                    <li>Existe versões prontas para instalação nos SO's mais comuns</li>
+                    <li>Suporte para <em>Humongous</em> volume de dados</li>
+                </ul>
+            </div>
+            <div id="drivers" class="step slide" data-x="0" data-y="-3000" data-rotate="-30">
+                <q><strong>Drivers</strong></q>
+                <p><strong>Drivers para:</strong>C, C++, C#, Go, Erlang, Java, JavaScript, Node.js, Perl, PHP, Python, Ruby, Scala...</p>
+            </div>
+            <div id="nomenclatura" class="step slide" data-x="0" data-y="-1500" data-rotate="-30">
+                <q><strong>Nomenclatura</strong></q>
+                <p>Banco de dados -> Base de dados</p>
+                <p>Tabela -> Coleção</p>
+                <p>Registro -> Documento</p>
+                <p>Join -> Documento Embarcado</p>
+                <p>Chave estrangeira -> Referência</p>
+            </div>
+            <div id="modelo" class="step slide" data-x="0" data-y="0" data-rotate="-30">
+                <q><strong>Modelo de Documento</strong></q>
+                <pre>
+{
+    'nome':'Sheldon',
+    'sobrenome':'Led',
+    'email':'sheldonled.ms@gmail.com'
+}
+                </pre>
+            </div>
+            <div id="insert" class="step slide" data-x="0" data-y="1500" data-rotate="-30">
+                <q><strong>Inserindo um registro</strong></q>
+                <pre>
+sheldon@led:~$ mongo
+MongoDB shell version: 2.4.8
+connecting to: test
+> use flisol
+switched to db flisol
+> db.alunos.insert({
+... 'nome':'Sheldon',
+... 'turma':'NodeJS',
+... 'nota': 10})
+> 
+                </pre>
+            </div>
+            <div id="sql2mongo" class="step slide" data-x="0" data-y="3000" data-rotate="-30">
+                <q><strong>Para quem é acostumado com SQL</strong></q>
+                <h3><a href="http://docs.mongodb.org/manual/reference/sql-comparison/">http://docs.mongodb.org/manual/reference/sql-comparison/</a></h3>
+            </div>
+            <div id="conclusao" class="step slide" data-x="0" data-y="4500" data-rotate="-30">
+                <q><strong>Conclusão</strong></q>
+                <ul>
+                    <li>É um novo paradigma, empreenda-se</li>
+                    <li>Não pense relacional</li>
+                    <li>É muito produtivo</li>
+                </ul>
+            </div>
+            <div id="fim" class="step slide" data-x="-4500" data-y="2500" data-scale="8">
+                <h2>Fim</h2>
+                <p id="fimbottom">
+                    <a href="http://mongodb.org">mongodb.org</a>
+                    <br>
+                    <a href="http://mongodb-tools.com/">Mongo Tools</a>
+                    <br><br>
+                    <span>Sheldon Led</span>
+                    <br>
+                    <a href="http://www.sheldonled.com" target="_blank">www.sheldonled.com</a>
+                    <br>
+                    <a href="mailto:sheldonled.ms@gmail.com" target="_blank">sheldonled.ms@gmail.com</a>
+                    <br>
+                    <a href="https://twitter.com/sheldonled" target="_blank">@sheldonled</a>
+                </p>
+            </div>
+
+            <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="20">
+            </div>
+
+        </div>
+        <div class="hint">
+            <p>Usando MongoDB em suas aplicações</p>
+        </div>
+        <script src="js/impress.js"></script>
+        <script>impress().init();</script>
+    </body>
+</html>
