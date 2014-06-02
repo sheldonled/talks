@@ -672,6 +672,15 @@ a:focus {
 .clear {
     clear: both;
 }
+table.normal {
+    display: block;
+    margin: 0 auto;
+    width: 700px;
+}
+table.normal td {
+    border: 1px solid #000;
+    padding: 20px;
+}
 #intro p, #fim p {
     text-align: center;
 }

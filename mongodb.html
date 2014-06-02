@@ -100,21 +100,61 @@
                     <li>Baseado em JavaScript</li>   
                     <li>Interface (linha de comando) com sintaxe JS</li>   
                     <li>Livre de modelagem (Schema Free)</li>
+                    <li>GridFS - Sistema de arquivos</li>
                     <li>Existe versões prontas para instalação nos SO's mais comuns</li>
                     <li>Suporte para <em>Humongous</em> volume de dados</li>
                 </ul>
             </div>
             <div id="drivers" class="step slide" data-x="0" data-y="-3000" data-rotate="-30">
                 <q><strong>Drivers</strong></q>
-                <p><strong>Drivers para:</strong>C, C++, C#, Go, Erlang, Java, JavaScript, Node.js, Perl, PHP, Python, Ruby, Scala...</p>
+                <div class="clear"></div>
+                <div style="float:left;">
+                    <strong>Drivers para:</strong>
+                    <ul>
+                        <li>C, C++</li>
+                        <li>C#,</li>
+                        <li>Go,</li>
+                        <li>Erlang,</li>
+                        <li>Java,</li>
+                    </ul>
+                </div>
+                <div style="float:right;margin-right:20%;">
+                    <ul>
+                        <li>JavaScript,</li>
+                        <li>Node.js,</li>
+                        <li>Perl,</li>
+                        <li>PHP,</li>
+                        <li>Python,</li>
+                        <li>Ruby,</li>
+                        <li>Scala...</li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
             </div>
             <div id="nomenclatura" class="step slide" data-x="0" data-y="-1500" data-rotate="-30">
                 <q><strong>Nomenclatura</strong></q>
-                <p>Banco de dados -> Base de dados</p>
-                <p>Tabela -> Coleção</p>
-                <p>Registro -> Documento</p>
-                <p>Join -> Documento Embarcado</p>
-                <p>Chave estrangeira -> Referência</p>
+                <table class="normal">
+                    <tr>
+                        <td>Banco de dados</td>
+                        <td>Base de dados</td>
+                    </tr>
+                    <tr>
+                        <td>Tabela</td>
+                        <td>Coleção</td>
+                    </tr>
+                    <tr>
+                        <td>Registro</td>
+                        <td>Documento</td>
+                    </tr>
+                    <tr>
+                        <td>Join</td>
+                        <td>Documento Embarcado</td>
+                    </tr>
+                    <tr>
+                        <td>Chave estrangeira</td>
+                        <td>Referência</td>
+                    </tr>
+                </table>
             </div>
             <div id="modelo" class="step slide" data-x="0" data-y="0" data-rotate="-30">
                 <q><strong>Modelo de Documento</strong></q>
@@ -132,12 +172,12 @@
 sheldon@led:~$ mongo
 MongoDB shell version: 2.4.8
 connecting to: test
-> use flisol
-switched to db flisol
-> db.alunos.insert({
+> use agenda
+switched to db agenda
+> db.contatos.insert({
 ... 'nome':'Sheldon',
-... 'turma':'NodeJS',
-... 'nota': 10})
+... 'tel':'123456789',
+... 'email': 'sheldonled.ms@gmail.com'})
 > 
                 </pre>
             </div>
