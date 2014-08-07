@@ -1,0 +1,259 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?l1lswn');
+	src:url('fonts/icomoon.eot?#iefixl1lswn') format('embedded-opentype'),
+		url('fonts/icomoon.woff?l1lswn') format('woff'),
+		url('fonts/icomoon.ttf?l1lswn') format('truetype'),
+		url('fonts/icomoon.svg?l1lswn#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+	content: "\e600";
+}
+.icon-pencil:before {
+	content: "\e601";
+}
+.icon-quill:before {
+	content: "\e602";
+}
+.icon-droplet:before {
+	content: "\e603";
+}
+.icon-image:before {
+	content: "\e604";
+}
+.icon-play:before {
+	content: "\e605";
+}
+.icon-camera:before {
+	content: "\e606";
+}
+.icon-connection:before {
+	content: "\e607";
+}
+.icon-folder-open:before {
+	content: "\e608";
+}
+.icon-coin:before {
+	content: "\e609";
+}
+.icon-envelop:before {
+	content: "\e60a";
+}
+.icon-location:before {
+	content: "\e60b";
+}
+.icon-clock:before {
+	content: "\e60c";
+}
+.icon-alarm:before {
+	content: "\e60d";
+}
+.icon-calendar:before {
+	content: "\e60e";
+}
+.icon-drawer:before {
+	content: "\e60f";
+}
+.icon-print:before {
+	content: "\e610";
+}
+.icon-download:before {
+	content: "\e611";
+}
+.icon-upload:before {
+	content: "\e612";
+}
+.icon-undo:before {
+	content: "\e613";
+}
+.icon-redo:before {
+	content: "\e614";
+}
+.icon-users:before {
+	content: "\e615";
+}
+.icon-user:before {
+	content: "\e616";
+}
+.icon-bubble:before {
+	content: "\e617";
+}
+.icon-bubbles:before {
+	content: "\e618";
+}
+.icon-reply:before {
+	content: "\e619";
+}
+.icon-forward:before {
+	content: "\e61a";
+}
+.icon-user2:before {
+	content: "\e61b";
+}
+.icon-leaf:before {
+	content: "\e61c";
+}
+.icon-cloud-download:before {
+	content: "\e61d";
+}
+.icon-cloud-upload:before {
+	content: "\e61e";
+}
+.icon-earth:before {
+	content: "\e61f";
+}
+.icon-heart:before {
+	content: "\e620";
+}
+.icon-star:before {
+	content: "\e621";
+}
+.icon-thumbs-up:before {
+	content: "\e622";
+}
+.icon-thumbs-up2:before {
+	content: "\e623";
+}
+.icon-cool:before {
+	content: "\e624";
+}
+.icon-grin:before {
+	content: "\e625";
+}
+.icon-wink:before {
+	content: "\e626";
+}
+.icon-angry:before {
+	content: "\e627";
+}
+.icon-shocked:before {
+	content: "\e628";
+}
+.icon-neutral:before {
+	content: "\e629";
+}
+.icon-wondering:before {
+	content: "\e62a";
+}
+.icon-checkmark-circle:before {
+	content: "\e62b";
+}
+.icon-cancel-circle:before {
+	content: "\e62c";
+}
+.icon-info:before {
+	content: "\e62d";
+}
+.icon-console:before {
+	content: "\e62e";
+}
+.icon-code:before {
+	content: "\e62f";
+}
+.icon-embed:before {
+	content: "\e630";
+}
+.icon-share:before {
+	content: "\e631";
+}
+.icon-mail:before {
+	content: "\e632";
+}
+.icon-google-plus:before {
+	content: "\e633";
+}
+.icon-facebook:before {
+	content: "\e634";
+}
+.icon-instagram:before {
+	content: "\e635";
+}
+.icon-twitter:before {
+	content: "\e636";
+}
+.icon-youtube:before {
+	content: "\e637";
+}
+.icon-github:before {
+	content: "\e638";
+}
+.icon-tux:before {
+	content: "\e639";
+}
+.icon-android:before {
+	content: "\e63a";
+}
+.icon-skype:before {
+	content: "\e63b";
+}
+.icon-chrome:before {
+	content: "\e63c";
+}
+.icon-firefox:before {
+	content: "\e63d";
+}
+.icon-IE:before {
+	content: "\e63e";
+}
+.icon-opera:before {
+	content: "\e63f";
+}
+.icon-html5:before {
+	content: "\e640";
+}
+.icon-css3:before {
+	content: "\e641";
+}
+.icon-file-xml:before {
+	content: "\e642";
+}
+.icon-file-css:before {
+	content: "\e643";
+}
+.icon-arrow-up:before {
+	content: "\e648";
+}
+.icon-arrow-down:before {
+	content: "\e649";
+}
+.icon-tux2:before {
+	content: "\e64a";
+}
+.icon-apple:before {
+	content: "\e64b";
+}
+.icon-android2:before {
+	content: "\e64c";
+}
+.icon-windows8:before {
+	content: "\e64d";
+}
+.icon-paperplane:before {
+	content: "\e644";
+}
+.icon-cone:before {
+	content: "\e645";
+}
+.icon-github2:before {
+	content: "\e646";
+}
+.icon-skype2:before {
+	content: "\e647";
+}
