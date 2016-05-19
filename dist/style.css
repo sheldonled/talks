@@ -1,2 +1,264 @@
-*{padding:0;margin:0;border:0;outline:0;font-size:1em;line-height:1.4em;list-style:none;text-decoration:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{height:100%;width:100%;margin:0;padding:0}body{font-family:'Open Sans',Arial,sans-serif;font-size:1em;line-height:1.4em;font-weight:100;margin:0;padding:0;height:100%;width:100%;background-color:#e6e6e6;color:#555}a{color:#25554C;-webkit-transition:all .6s linear;-moz-transition:all .6s linear;-o-transition:all .6s linear;transition:all .6s linear;text-decoration:none;border-bottom:2px solid transparent}a:visited{color:#25554C}a:active,a:focus,a:hover{border-bottom:2px solid #25554C}a.notransition,a.notransition:hover{border-bottom:0;display:block}a img,a.image{border:none}h1{font-size:3.5em;line-height:1em;font-weight:100}h2{font-size:2.5em;line-height:2em;font-weight:100;text-align:center}h3{font-size:1.8em;line-height:1.5em;font-weight:100;text-align:center}h4{font-size:1.6em;line-height:1.5em;font-weight:600}p{font-size:1.2em;margin-bottom:10px}strong{font-weight:900}code{display:block;padding:10px;background:rgba(0,0,0,0.5);color:rgb(255,255,255);}ul.listtalks{background:white;padding:15px}.clear:after,.clear:before{content:" ";display:table}.clear{clear:both}.text-center{text-align:center}.left{float:left}.right{float:right}.btn{background-color:#2ecc71;border-radius:24px;color:#fff;display:inline-block;font-size:1.2em;font-weight:400;margin:30px 0;padding:10px 30px;text-decoration:none}.btn:hover{opacity:.8}.wrap{margin:0 auto;max-width:1420px;overflow:hidden;padding:0 50px;position:relative;width:100%}header.header{height:260px;box-shadow:0 -24px 8px 27px rgba(0,0,0,.3);position:relative;z-index:150;background:#f5f5f5}header.talks{background:url(../img/talks.png) 0 0/cover no-repeat;margin-bottom:30px}header.projects{background:url(../assets/img/code.jpg) 0 0/cover no-repeat;margin-bottom:30px}header.talks a:hover,header.projects a:hover{border-bottom:2px solid #000}header.talks a,header.projects a{color:#000}header.talks a.active,header.projects a.active{color:#fff;background:rgba(0,0,0,.5);padding:0 5px}header.talks .logo,header.projects .logo{height:50%;width:auto;margin:10px auto}header.talks h1,header.projects h1{font-size:1.8em;color:#fff}header.home{color:#fff;height:100%;background:url(../assets/img/bike-sheldon.jpg) 0 0/cover no-repeat}header h1{margin:0;font-family:letteromaticregular;font-size:2.2em;line-height:1em;font-weight:700;text-shadow:0 0 10px #333,0 -5px 10px #333,0 5px 10px #333}header .logo{display:block;width:30%;height:auto;margin:10% auto}nav.menu li:before{content:"";display:table}nav.menu{text-align:center}.menu a{color:#fff}.menu a:hover{border-bottom:2px solid #fff}#arrow{cursor:pointer;color:#fff;position:absolute;bottom:5px;width:100%;text-align:center;font-size:3em;border:0}#arrow:hover{bottom:15px;border:0}.nav-item{padding:10px;display:inline-block;margin-right:10px}#blogs{height:100%;width:100%}#blogs h3{background:#fff}#blogs p{padding:10px}#blogs .left,#blogs .middle,#blogs .right{width:100%;float:none;border:1px solid #c8c8c8}#blogs .banner{display:block;width:100%;max-width:200px;height:auto;margin:0 auto 15px}.aboutmenu{text-align:center;color:#fff;list-style:none}.aboutmenu li{display:inline-block;padding:10px;margin-right:10px;background:#1e8273;cursor:pointer}.aboutmenu li.active{border-top:4px solid #002710;padding-top:6px}#bioinfo,#resumeinfo{padding:0 5%}#bioinfo h3,#resumeinfo h3{color:#000}#resumeinfo ul ul{margin-left:10px}#resumeinfo li:before{content:"\00BB";font-weight:900;color:#000;font-family:monospace;padding:5px}#fotocurriculo{float:right}.projects img{max-height:200px;display:block;margin:0 auto}.projects .loc{font-size:.8em;text-align:center}.projects ul ul{margin-left:10px}.talks li:before{content:"\00BB";font-weight:900;color:#000;font-family:monospace;padding:5px}#footer{padding:.8%;background:#787878;font-size:1.8em;color:#fff;text-align:center;margin-top:15px;box-shadow:0 15px 15px 20px rgba(0,0,0,.3)}#footer a{color:#fff}#footer p{font-size:.5em}
-@media (min-width:600px){.projects .loc{font-size:1.2em;text-align:center}header h1{font-size:3.5em}header .logo{margin:8% auto}.menu a{font-size:1.3em}}@media (min-width:960px){.projects img{max-height:300px}.projects .loc{font-size:1.4em;text-align:center}#blogs .left,#blogs .middle,#blogs .right{width:30%;margin:0 2%;float:left}#blogs .left{margin-left:5px}#blogs .right{margin-right:5px}header h1{font-size:4.5em}header .logo{width:20%;margin:5% auto}.menu a{font-size:1.5em}}@media (min-width:1400px) and (min-height:600px){.projects img{max-height:400px}}@media (orientation:landscape){header .logo{width:20%;margin:2% auto}}
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    font-size: 1em;
+    line-height: 1.4em;
+    list-style: none;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.4em;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #04395D;
+  color: white;
+}
+a {
+    color: #00FFCF;
+    -webkit-transition: all .6s linear;
+    -moz-transition: all .6s linear;
+    -o-transition: all .6s linear;
+    transition: all .6s linear;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+a:visited {
+    color: #00FFCF;
+}
+a:active,
+a:focus,
+a:hover {
+    border-bottom: 2px solid #00FFCF;
+}
+a.notransition,
+a.notransition:hover {
+    border-bottom: 0;
+    display: block;
+}
+a img,
+a.image {
+    border: none;
+}
+h1 {
+    font-size: 3.5em;
+    line-height: 1em;
+    font-weight: 100;
+}
+h2 {
+    font-size: 2.5em;
+    line-height: 2em;
+    font-weight: 100;
+    text-align: center;
+    color: white;
+}
+h3 {
+    font-size: 1.8em;
+    line-height: 1.5em;
+    font-weight: 100;
+    text-align: center;
+}
+h4 {
+    font-size: 1.6em;
+    line-height: 1.5em;
+    font-weight: 600;
+}
+p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+strong {
+    font-weight: 900;
+}
+code {
+    display: block;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+}
+ul.listtalks {
+    background: white;
+    padding: 15px;
+}
+.clear:after,
+.clear:before {
+    content: " ";
+    display: table;
+}
+.clear {
+    clear: both;
+}
+.text-center {
+    text-align: center;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.talks a,.talks a:visited,.talks a:link {
+  color: #FFF;
+}
+.talks a:hover {
+  color: #B495EA;
+  border-bottom: 1px solid #FFF;
+}
+.wrap {
+    margin: 0 auto;
+    max-width: 1420px;
+    overflow: hidden;
+    padding: 0 50px;
+    position: relative;
+    width: 100%;
+}
+
+/**************************************************
+ * HEADER
+ **************************************************/
+header.header {
+    height: 260px;
+    box-shadow: 0 -24px 8px 27px rgba(0, 0, 0, .3);
+    position: relative;
+    z-index: 150;
+    background: #f5f5f5;
+}
+header.header {
+    background: url(../img/talks.png) 0 0/cover no-repeat;
+}
+header.header a:hover {
+  border-bottom: 2px solid #000;
+}
+header.header a {
+  color: rgb(0,0,0);
+}
+header.header a.active {
+  color: #FFF;
+  background: rgba(0,0,0,0.5);
+  padding: 0 5px;
+}
+header.header .logo  {
+  height: 50%;
+  width: auto;
+  margin: 10px auto;
+}
+header.header h1 {
+  font-size: 1.8em;
+  color: #FFF;
+}
+/**************************************************
+ * TALKS
+ **************************************************/
+section.talks {
+  padding: 50px 0;
+  border-bottom: 2px solid white;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.talk {
+  float:left;
+  width: 300px;
+  height: 400px;
+  margin: 0 2%;
+  color: white;
+  text-align:center;
+}
+.talk p {
+  color: #B388FF;
+}
+.talk img {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: auto;
+  cursor:pointer;
+}
+
+/**************************************************
+ * DETAIL
+ **************************************************/
+ .close:before {
+  content: "\e904"; 
+  font-family: icomoon;
+  font-size: 20px;
+}
+.close {
+  float: right;
+  cursor: pointer;
+}
+#prjDetails h2 {
+  font-size: 1em;
+  background-color:rgba(255,255,255,.3);
+  margin: 45px 0;
+}
+#prjDetails {
+  display: none;
+  position: absolute;
+  padding: 3%;
+  top:100%;
+  left:0;
+  width: 100%;
+  min-height: 100%;
+  border-radius: 25px;
+  background: #fdfdfd;
+  z-index: 200;
+
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 2px 3px 0 rgba(255,255,255,.3), inset 0 -15px 30px 0 rgba(0,0,0,.2), 0 3px 2px 0 rgba(0,0,0,.2);
+  box-shadow: inset 0 2px 3px 0 rgba(255,255,255,.3), inset 0 -15px 30px 0 rgba(0,0,0,.2), 0 3px 2px 0 rgba(0,0,0,.2);
+  background-image: -webkit-linear-gradient(top, #04395d, #056AAF 130%);
+  background-image: -moz-linear-gradient(top, #04395d, #056AAF 130%);
+  background-image: -o-linear-gradient(top, #04395d, #056AAF 130%);
+  background-image: -ms-linear-gradient(top, #04395d, #056AAF 130%);
+  background-image: linear-gradient(to bottom, #04395d, #056AAF 130%);
+}
+
+#detail-prjUrl {
+  font-size: 1.6em;
+  display: block;
+  text-align: center;
+}
+#detail-prjDesc {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+#detail-prjImg {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: auto;
+}
+/**************************************************
+ * FOOTER
+ **************************************************/
+#footer {
+  padding: 0.8%;
+  background: rgb(120,120,120);
+  font-size: 1.8em;
+  color: rgb(255,255,255);
+  text-align: center;
+  margin-top: 15px;
+  box-shadow: 0 15px 15px 20px rgba(0,0,0,.3);
+}
+#footer a { 
+  color: rgb(255,255,255);
+}
+#footer p {
+  font-size: 0.5em;
+}
