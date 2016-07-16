@@ -5,14 +5,24 @@
   window.onload = function(){
     document.querySelectorAll("#prjDetails .close")[0].addEventListener('click',function(e){closeDetailProject();});
 
+    try{
     //15 Ways of making money with Free Software
     document.querySelectorAll(".moneyfs img")[0].addEventListener('click',function(e){
       detailProject({"id":"moneyfs","name":"15 Ways of making money with Free Software","img":"img/floss.png","slides":"15waysfs.html","essay":"http://sheldonled.com/pdf/15waysFS.pdf"});
     });
+    } catch (e){} //do nothing
+    try{
+    //15 maneiras de ganhar dinheiro com software livre
+    document.querySelectorAll(".sl15 img")[0].addEventListener('click',function(e){
+      detailProject({"id":"sl15","name":"15 Maneiras de ganhar dinheiro com Software Livre","img":"../img/floss.png","slides":"../15maneirassl.html"});
+    });
+    } catch (e){} //do nothing
+    try{
     //Google Drive API
     document.querySelectorAll(".googledrive img")[0].addEventListener('click',function(e){
-      detailProject({"id":"googledrive","name":"Google Drive API","img":"img/googledrive.png","slides":"googledrive.html","essay":""});
+      detailProject({"id":"googledrive","name":"Google Drive API","img":"img/googledrive.png","slides":"googledrive.html"});
     });
+    } catch (e){} //do nothing
   };
 
     /**
@@ -112,7 +122,10 @@
     prjName = document.getElementById("detail-prjName"),
     prjDesc = document.getElementById("detail-prjDesc"),
     prjSlides = document.getElementById("detail-prjSlides"),
+    spnEssay = document.getElementById("detail-spnEssay"),
     prjEssay = document.getElementById("detail-prjEssay"),
+    spnVideo = document.getElementById("detail-spnVideo"),
+    prjVideo = document.getElementById("detail-prjVideo"),
     prjImg = document.getElementById("detail-prjImg");
     if(view.style.display == "block"){
       closeDetailProject();
@@ -123,7 +136,14 @@
     prjImg.src  = prj.img;
     prjImg.alt  = prj.name;
     prjSlides.href = prj.slides;
-    prjEssay.href = prj.essay;
+    if(prj.essay)
+      prjEssay.href = prj.essay;
+    else
+      spnEssay.style.display = "none";
+    if(prj.video)
+      prjVideo.href = prj.video;
+    else
+      spnVideo.style.display = "none";
     //Adding the description of each project
     switch(prj.id) {
       case "moneyfs":
@@ -131,6 +151,12 @@
         "and more than 20 years of Linux, a lot of things changed! With the coming of this "+
         "revolutionary way of seeing the world, new business models has been developed or matured. "+
         "I give you then, 15 ways of making your success with this phylosophy of like  and work.</p>";
+        break;
+      case "sl15":
+        prjDesc.innerHTML = "<p>Hoje, com mais de 30 anos do Movimento do Software Livre, "+
+        "e mais de 20 anos de Linux, muita coisa mudou! Com o surgimento desta revolucionária "+
+        "maneira de ver o mundo, novos modelos negócios foram criados ou amadurecidos. "+
+        "Apresento-vos então, 15 maneiras de obter sucesso com esta filosofia de vida e trabalho</p>";
         break;
       case "googledrive":
         prjDesc.innerHTML = "<p>Most users over the internet has the acknowledgement of how useful are "+
