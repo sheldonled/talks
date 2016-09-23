@@ -1,0 +1,39 @@
+
+reveal .box {
+    text-align: left;
+    color: white;
+    width: 70%;
+    height: auto;
+    padding: 15px;
+}
+
+reveal .box > h2 {
+    font-size: 0.9em;
+}
+
+.box > p {
+    font-size: 0.6em;
+    margin: 10px 0 0;
+}
+
+.gaia {
+    background-color: darkorange;
+}
+.gecko {
+    background-color: indianred;
+}
+.gonk {
+    background-color: darkgrey;
+}
+.reveal .blackcard {
+  background:rgba(0,0,0,0.7);
+  border-radius:20px;
+  padding:20px;
+}
+.reveal li {
+  margin-bottom: 20px;
+}
+.reveal ul.shortlist li {
+  width: 50%;
+  float: left;
+}
