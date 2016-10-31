@@ -18,6 +18,24 @@
     });
     } catch (e){} //do nothing
     try{
+    //Como contribuir com a Mozilla
+    document.querySelectorAll(".mozcontr img")[0].addEventListener('click',function(e){
+      detailProject({"id":"mozcontr","name":"Como contribuir com a Mozilla","img":"../img/mozbr.png","slides":"../mozcontr.html"});
+    });
+    } catch (e){} //do nothing
+    try{
+    //How to contribute with Mozilla
+    document.querySelectorAll(".mozcontribute img")[0].addEventListener('click',function(e){
+      detailProject({"id":"mozcontribute","name":"How to contribute with Mozilla","img":"img/mozbr.png","slides":"mozcontribute.html"});
+    });
+    } catch (e){} //do nothing
+    try{
+    //Mozilla Connected Devices
+    document.querySelectorAll(".conndev img")[0].addEventListener('click',function(e){
+      detailProject({"id":"conndev","name":"Mozilla Connected Devices","img":"img/mozilla-ow.jpg","slides":"conndev.html"});
+    });
+    } catch (e){} //do nothing
+    try{
     //Google Drive API
     document.querySelectorAll(".googledrive img")[0].addEventListener('click',function(e){
       detailProject({"id":"googledrive","name":"Google Drive API","img":"img/googledrive.png","slides":"googledrive.html"});
@@ -157,6 +175,25 @@
         "e mais de 20 anos de Linux, muita coisa mudou! Com o surgimento desta revolucionária "+
         "maneira de ver o mundo, novos modelos negócios foram criados ou amadurecidos. "+
         "Apresento-vos então, 15 maneiras de obter sucesso com esta filosofia de vida e trabalho</p>";
+        break;
+      case "mozcontribute":
+        prjDesc.innerHTML = "<p>The intention of this talk is to inspire, help and emancipate people and groups "+
+        "so they can embrace Mozilla's mission and colaborate with Mozilla's products and Free/Open Projects. The "+
+        "main projects of Mozilla will be presented and it will be showed what Mozilla Brazil has been done. "+
+        "Get involved and start today to contribute with mozilla.</p>";
+        break;
+      case "mozcontr":
+        prjDesc.innerHTML = "<p>A intenção dessa palestra é inspirar, ajudar e emancipar pessoas e grupos "+
+        "para que possam abraçar a missão da Mozilla e colaborar com seus produtos e projetos livres. Serão "+
+        "apresentados os principais projetos da Mozilla e será abordado o que a comunidade Mozilla Brasil "+
+        "tem feito. Envolva-se e comece hoje mesmo a contribuir com a Mozilla.</p>";
+        break;
+      case "conndev":
+        prjDesc.innerHTML = "<p>In 2015 Mozilla announced that Firefox OS will stop being developed and the "+
+        "team will focus on Internet of Things. A lot of knowledge from Firefox OS development could be reused "+
+        "to ensure Security, Privacy, Interoperability and Openness on IoT. Mozilla wants to influence on IoT "+
+        "protocols and solve real world problems, and this talk present the changing from Firefox OS to IoT, "+
+        "and Mozilla main projects in this area.</p>";
         break;
       case "googledrive":
         prjDesc.innerHTML = "<p>Most users over the internet has the acknowledgement of how useful are "+
