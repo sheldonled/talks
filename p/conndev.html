@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Mozilla Connected Devices - Sheldon Led</title>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../tools/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../tools/reveal.js/css/theme/mozilla-darkgrey.css" id="theme">
+    <link rel="stylesheet" href="../src/css/conndev.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../tools/reveal.js/css/print/pdf.css' : '../tools/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="tools/reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+  
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Mozilla Connected Devices</h1>
+				    <a href="https://mozillabrasil.org.br/" target="_blank">
+				      <img src="../img/mozbr.png" alt="Mozilla Brasil" class="noformat" style="width:200px;border:0">
+				    </a>
+					<p><small>
+					  <a href="http://github.sheldonled.com/talks/p/conndev.html" target="_blank">
+					    http://github.sheldonled.com/talks/p/conndev.html
+				      </a>
+				    </small></p>
+				</section>
+				<section data-background="../img/fireweb-fox.jpg">
+					<h2 class="blackcard">Once upon a time, there was Firefox OS</h2>
+				</section>
+				<section data-background="../img/giantfox-back.png">
+					<h2>Firefox OS</h2>
+					<ul>
+					  <li>AKA Boot to Gecko (B2G)</li>
+					  <li>Kernel Linux (Android)</li>
+					  <li>Apps entirely developed using <br> HTML, Javascript and Web API</li>
+					</ul>
+				</section>
+				<section data-background="../img/fxos_background.png">
+				  <div class="blackcard">
+					<h2>Firefox OS</h2>
+					<ul>
+            <li class="fragment">Problem: Good mobile devices are too expensive</li>
+            <li class="fragment">Problem: Cheap mobile devices are too bad</li>
+            <li class="fragment">Problem: Marjority of people in a lot of countries still use <strong>Featured Phones</strong></li>
+            <li class="fragment">Firefox OS came with the idea of offering smartphones <strong>cheapest and with good quality</strong></li>
+            <li class="fragment">And also democratize the mobile development</li>
+					</ul>
+				  </div>
+				</section>
+				<section>
+          <h2>Firefox OS structure</h2>
+          <div class="centro">
+            <div class="gaia box">
+                <h2>Gaia</h2>
+                <p>Collection of web apps that provide the UI</p>
+            </div>
+            <div class="gecko box">
+                <h2>Gecko</h2>
+                <p>JS Engine and HTML Render, friendly APIs to access the hardware</p>
+            </div>
+            <div class="gonk box">
+                <h2>Gonk</h2>
+                <p>Kernel Linux, Device drivers and hardware abstraction</p>
+            </div>
+        </div>
+				</section>
+				<section>
+          <h2>Types of Firefox OS Apps</h2>
+          <ul>
+            <li class="fragment">
+              <mark>Hosted Apps</mark> - stored in your server, easier to update, harder to be approved in the marketplace, limited access to the hardware.
+            </li>
+            <li class="fragment">
+              <mark>Priviledged Apps</mark> - stored in the Marketplace (and reviewed by them), uses a <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">Content Security Policy</a>.
+            </li>
+            <li class="fragment">
+              <mark>Certified Apps</mark> - part of the Operating System, just for Mozilla and partners.
+            </li>
+          </ul>
+				</section>
+				<section>
+				  <h2>Web APIs (Hosted Apps)</h2>
+				  <ul class="shortlist">
+            <li>Vibration API</li>
+            <li>Screen Orientation</li>
+            <li>Geolocation API</li>
+            <li>Mouse Lock API</li>
+            <li>Network Information API</li>
+            <li>Battery Status API</li>
+            <li>Alarm API</li>
+            <li>Push Notifications API</li>
+            <li>WebFM API / FMRadio</li>
+            <li>WebPayment</li>
+            <li>IndexedDB</li>
+            <li>Ambient light sensor</li>
+            <li>Proximity sensor</li>
+            <li>Notification</li>
+          </ul>
+				</section>
+				<section>
+				  <h2>Web APIs (Priviledged Apps)</h2>
+				  <ul class="shortlist"><ul>
+            <li>Device Storage API</li>
+            <li>Browser API</li>
+            <li>TCP Socket API</li>
+            <li>Contacts API</li>
+            <li>systemXHR</li>
+          </ul>
+				</section>
+				<section>
+				  <h2>Web APIs (Certified Apps)</h2>
+				  <ul class="shortlist">
+            <li>WebTelephony</li>
+            <li>WebSMS</li>
+            <li>Idle API</li>
+            <li>Settings API</li>
+            <li>Power Management API</li>
+            <li>Mobile Connection API</li>
+            <li>WiFi Information API</li>
+            <li>WebBluetooth</li>
+            <li>Permissions API</li>
+            <li>Network Stats API</li>
+            <li>Camera API</li>
+            <li>Time/Clock API</li>
+            <li>Attention screen</li>
+            <li>Voicemail</li>
+          </ul>
+				</section>
+				<section data-background="../img/connected_devices.jpg">
+          <div class="blackcard">
+            <h2><a href="https://www.mozilla.org/en-US/firefox/os/" target="_blank">Firefox OS Metamorphosis</a></h2>
+            <ul>
+              <li class="fragment">From Smartphone devices to Any Device</li>
+              <li class="fragment">
+                Firefox OS TV
+                <img class="noformat" src="../img/firefox_tv.jpg" alt="Firefox OS TV Panasonic" style="width:320px">
+              </li>
+              <li class="fragment">
+                Firefox OS Rapberry PI
+                <a href="https://www.youtube.com/watch?v=U467HSjuFOs" target="_blank">
+                  <img class="noformat" src="../img/fxos_raspberry.png" alt="Firefox OS on Raspberry PI" style="width:320px">
+                </a>
+              </li>
+              <li class="fragment"><a href="https://wiki.mozilla.orghttps://wiki.mozilla.org/Connected_Devices" target="_blank">Connected Devices</a></li>
+            </ul>
+          </div>
+        </section>
+				<section data-background="../img/connected_devices.jpg">
+				  <h2 class="blackcard"><a href="https://wiki.mozilla.orghttps://wiki.mozilla.org/Connected_Devices" target="_blank">Connected Devices</a></h2>
+            <div class="blackcard fragment">
+              <ul>
+                <li>Internet of Things (IoT) leads the way to the next phase of the Internet</li>
+                <li>Mozilla wants to ensure:
+                  <ul>
+                    <li>Security for users</li>
+                    <li>Interoperability</li>
+                    <li>Openness</li>
+                  </ul>
+                </li>
+                <li>Influence IoT protocols</li>
+                <li>Solve real end user problems</li>
+              </ul>
+            </div>
+				</section>
+				<section data-background="../img/connected_devices.jpg">
+					<h1 class="blackcard">
+					  <a href="https://wiki.mozilla.orghttps://wiki.mozilla.org/Connected_Devices/Projects" target="_blank">
+					    Current Connected Devices Projects
+				      </a>
+				    </h1>
+				</section>
+				<section>
+                  <h2><a href="https://wiki.mozilla.org/Connected_Devices/Projects/SensorWeb" target="_blank">Sensor Web</a></h2>
+                  <img src="../img/Project-sensorweb-station.jpg" alt="Project Sensor Web Station">
+				</section>
+				<section>
+                  <h2><a href="https://wiki.mozilla.org/Connected_Devices/Projects/Project_Haiku" target="_blank">Project Haiku</a></h2>
+                  <img src="../img/Haiku-proto-shot.jpg" alt="Haiku prototype">
+				</section>
+				<section>
+                  <h2><a href="https://wiki.mozilla.org/Connected_Devices/Projects/Project_Magnet" target="_blank">Project Magnet</a></h2>
+                  
+				</section>
+                 <section>
+                  <h2>Closed Projects</h2>
+                  <ul>
+                    <li>
+                     <strong><a href="https://wiki.mozilla.org/Connected_Devices/Projects/Project_Tablet" title="Connected Devices/Projects/Project Tablet">Project Tablet</a></strong>:
+                      Exploring a simple, single-purpose tablet, completely dedicated to browsing the web. 
+                    </li>
+                    <li>
+                      <strong><a href="https://wiki.mozilla.org/Connected_Devices/Projects/Project_Link" title="Connected Devices/Projects/Project Link">Project Link</a></strong>: 
+                      Personal user agent for the smart home, creating a web of things that is completely yours.
+                    </li>
+                    <li>
+                      <strong><a href="https://wiki.mozilla.org/Connected_Devices/Projects/Smart_Kitchen" title="Connected Devices/Projects/Smart Kitchen">Smart Kitchen</a></strong>:
+                      Helps answer the question, "What's for dinner?" by identify your existing inventory, and then suggesting recipe options based on available refrigerator ingredients.
+                    </li>
+                  </ul>
+                </section>
+                <section>
+                  <h2>Closed Projects</h2>
+                  <ul>
+                    <li>
+                      <strong><a href="https://wiki.mozilla.org/Connected_Devices/Projects/Project_Cue">Project Cue</a></strong>:
+                      Makes use of an always-on voice-enabled smart screen device to set reminders and manage and keep track of activities, events, and to-do lists of family members.
+                    </li>
+                    <li>
+                      <strong><a href="https://wiki.mozilla.org/Connected_Devices/Projects/Vaani">Project Vaani</a></strong>:
+                      Project Vaani aims to bring a voice interface to the world of connected devices, using open and customizable technologies. We have stopped the Vaani-powered prototype called Vaani-Local and moved the technology building work under "Platform &amp; Tools"
+                    </li>
+                    <li>
+                      <strong><a href="https://wiki.mozilla.org/Connected_Devices/Projects/Smart_Displays">Smart Displays</a></strong>:
+                      Project is set out to explore the role of displays at home and understand what role displays might play in the future connected home and opportunities for innovation.
+                    </li>
+                  </ul>
+                </section>
+                <section>
+                  <h2>
+                    <a href="https://wiki.mozilla.org/Connected_Devices/Product_Innovation_Process" target="_blank">Product Innovation Process</a>
+                  </h2>
+                  <ul>
+                    <li class="fragment">Lean Canvas</li>
+                    <li class="fragment">
+                     Proccess "Gates"
+                      <ol>
+                        <li>Ideation</li>
+                        <li>Validation (Problem/Solution Fit)</li>
+                        <li>Productisation (Product/Market Fit)</li>
+                        <li>Scaling</li>
+                      </ol>
+                    </li>
+                    <li class="fragment">
+                      Public Products
+                      <ul>
+                        <li><a href="https://wiki.mozilla.org/Firefox_OS/Smart_TV" target="_blank">SmartTV</a></li>
+                        <li><a href="http://mozvr.com/" target="_blank">MozVR</a></li>
+                        <li><a href="https://wiki.mozilla.org/FlyWeb" target="_blank">FlyWeb</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </section>
+                <section data-background="../img/owp.png">
+                </section>
+                <section>
+                  <h2>Stay tuned</h2>             
+                  <ul>
+                    <li>Meetings Every Thursday at 10:30am Pacific Time (18:30 BST)</li>
+                    <li><a href="http://air.mozilla.org/" target="_blank">http://air.mozilla.org/</a> to watch and listen</li>
+                    <li>Join irc.mozilla.org #connecteddevices for backchannel discussion</li>
+                    <li><a href="https://wiki.mozilla.org/Connected_Devices" target="_blank">https://wiki.mozilla.org/Connected_Devices</a></li>
+                    <li><a href="https://discourse.mozilla-community.org/t/firefox-os-connected-devices-announcement/6864" target="_blank">Firefox OS/Connected Devices Announcement</a></li>
+                    <li><a href="https://discourse.mozilla-community.org/c/connected-devices/" target="_blank">Connected Devices category on Discourse</a></li>
+                    <li>IRC <a href="irc://irc.mozilla.org/#cd-participation" target="_blank">#cd-participation</a> channel</li>
+                    <li>IRC <a href="irc://irc.mozilla.org/#foxfooding" target="_blank">#foxfooding</a> channel</li>
+                    <li><a href="https://telegram.me/joinchat/CvjOoj8Rv-XmJkOEDqkohg" target="_blank">Connected Devices Group on Telegram</a></li>
+                    <li><a href="https://twitter.com/foxfooding" target="_blank">Foxfooding on Twitter</a></li>
+                    <li>Email: cd-info[at]mozilla[dot]com | foxfood-central[at]mozilla[dot]com</li>
+                  </ul>
+                </section>
+                <section data-background="../img/welcome_mozillians.jpg">
+                  <h1>
+                    <strong style="background:rgba(231,173,82,.6);border-radius:25px;padding:0 20px;color:black">
+                      Thank You
+                    </strong>
+                  </h1>
+                </section>
+			</div>
+		</div>
+    <script src="../tools/reveal.js/lib/js/head.min.js"></script>
+    <script src="../tools/reveal.js/js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+            dependencies: [
+                { src: '../tools/reveal.js/plugin/notes/notes.js', async: true }
+        ]});
+    </script>
+	</body>
+</html>

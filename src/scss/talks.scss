@@ -1,0 +1,88 @@
+.site-talks {
+  display: flex;
+  flex-flow: nowrap column;
+  padding: .5rem .5rem 0;
+  text-shadow: 0 1px 2px $shadow-black;
+  width: 100%;
+
+  .title__year {
+    color: $charcoal;
+    font-size: 2rem;
+    margin: 2rem auto 0;
+    max-width: 40rem;
+    text-align: center;
+  }
+}
+
+.site-talks__item {
+  border-top: 1px solid $iron;
+  margin: 1rem auto 3rem;
+  max-width: 40rem;
+  padding: 0 1rem 1rem;
+  width: 100%;
+
+  .talk__title {
+    color: $oil;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+  }
+
+  .talk__details {
+    @include grid;
+    @include grid-template-columns(60%  40%);
+    @include grid-template-rows(minmax(min-content, auto) minmax(min-content, auto));
+  }
+
+  .talk__date {
+    @include grid-column(2);
+    @include grid-row(1);
+    line-height: 2rem;
+    text-align: right;
+  }
+
+  .talk__venue {
+    @include grid-column(1);
+    @include grid-row(1);
+    line-height: 2rem;
+  }
+
+  .talk__presentation {
+    @include grid-column(1, 2);
+    @include grid-row(2);
+    line-height: 2rem;
+  }
+
+  .talk__actions {
+    @include grid-column(1, 2);
+    @include grid-row(3);
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: flex-end;
+    line-height: 2rem;
+  }
+
+  .talk__article {
+    margin: .5rem;
+  }
+
+  .talk__showdesc {
+    background-color: $rgba-secondary-1-2;
+    margin: .5rem;
+    padding: .2rem;
+  }
+
+  .talk__description {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .3s ease-in;
+    & > * {
+      line-height: 1.4rem;
+    }
+  }
+
+  .talk__description--open {
+    max-height: 25rem;
+    padding: 1rem 0 0;
+  }
+
+}

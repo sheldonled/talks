@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Entendendo a arquitetura de um Documento web</title>
+        <meta name="description" content="Apresentação feita com impress.js, Entendendo a arquitetura de um Documento web" />
+        <meta name="author" content="Sheldon Led" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1024" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <link href="../src/css/dom.css" rel="stylesheet" />
+
+        <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon"/>
+    </head>
+    <body class="impress-not-supported">
+        <div id="impress">
+            <div id="intro" class="step slide" data-x="-3000" data-y="-2500">
+                <p>A web deixou de ser um amontoado de páginas e passou a ser uma 
+                    plataforma com um pool de aplicações que podem ser executadas pelo 
+                    navegador. Um dos principais fatos que proporcionaram este avanço foi 
+                    a manipulação precisa dos elementos do HTML. Entenda como são 
+                    especificados estes elementos através do 
+                    <a href="http://software.hixie.ch/utilities/js/live-dom-viewer/">DOM (Document Object Model)</a>
+                    e como isso influencia na sua programação Front End.</p>
+                <p id="introbottom">
+                    <span>Sheldon Led</span>
+                    <br>
+                    <a href="www.sheldonled.com">www.sheldonled.com</a>
+                </p>
+            </div>
+            <div id="historico" class="step slide" data-x="-1500" data-y="-2500" data-rotate="-30" >
+                <q><strong>Software ao longo dos anos</strong></q>
+                <ul>
+                    <li>Software 100% offline - cada máquina armazenava seus dados processados</li>
+                    <li>Com o aumento das redes, passamos a desenvolver softwares com dados
+                        centralizados em um armazenamento único</li>
+                    <li>Hoje a divisão mínima de um software é 3 camadas, onde as regras
+                        de negócio e persistência ficam num servidor universal, e a visão pode
+                        ser obtida em qualquer lugar do mundo pela internet através de  um
+                        navegador.</li>
+                </ul>
+            </div>
+            <div id="devweb" class="step slide" data-x="0" data-y="-2500" data-rotate="-60">
+                <q><strong>Web x Servidor</strong></q>
+                <p>
+                    Se pensarmos de forma mais radical, linguagens como PHP, Java, Ruby etc
+                    são linguagens de servidor. Linguagens Web são aquelas que um navegador
+                    é capaz de interpretar
+                </p>        
+                <ul>
+                    <li>HTML</li>
+                    <li>XML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>  
+                    <li>JSON</li>  
+                    <li>SVG</li> 
+                    <li>WebGL.. etc</li>             
+                </ul>
+            </div>
+
+            <div id="camadas" class="step slide" data-x="1500" data-y="-2500" data-rotate="-30">
+                <q>A web é construida em um modelo 3 camadas também</q>
+                <div class="three">
+                    <span>Conteúdo (HTML)</span>
+                    <p>Uma estrutura que marca o texto (conteúdo, para que ele seja 
+                        manipulado pelo CSS e Javascript</p>
+                </div>
+                <div class="three">
+                    <span>Apresentação (CSS)</span>
+                    <p> Manipula a forma como os elementos são desenhados
+                        selecionando-os pela tag, classe ou ID</p>
+                </div>
+                <div class="three">
+                    <span>Comportamento (JS)</span>
+                    <p>É responsável por toda interatividade que o conteúdo terá com o 
+                        usuário. Manipula as ações que um documento web pode ter.</p>
+
+                </div>
+                <div class="clear"></div>
+                <p>Uma camada complementa a outra e as três são capazes de apresentar 
+                    qualquer conteúdo na web.</p>
+            </div>
+
+            <div id="fluxo" class="step slide" data-x="3000" data-y="-2500" >
+                <h2>Fluxo Geral da apresentação de um documento web</h2>
+                <div id="flxhtml">Interpretador HTML</div>
+                <div id="flxdom">Árvore DOM</div>
+                <div id="flxrend">Árvore de Renderização</div>
+                <div id="flxlay">Layout e Pintura</div>
+                <hr class="clear">
+                <div id="flxrede">REDE</div>
+            </div>
+
+            <div id="title" class="step" data-x="-1000" data-y="0" data-scale="4">
+                <span class="try">Os Browsers montam a árvore DOM</span>
+                <h1><a href="http://software.hixie.ch/utilities/js/live-dom-viewer/">
+                        Document Object Model
+                </a></h1>
+                <div class="footnote">Cada tag do HTML se transforma em um galho dessa 
+                    árvore. O DOM é a interface entre o HTML e o "mundo externo".</div>
+            </div>
+
+            <div id="navegadores" class="step slide" data-x="4500" data-y="-2500" data-rotate="30" >
+                <p><strong>Funcionalidade principal dos navegadores</strong></p>
+                <ul>
+                    <li>Mostrar um recurso da web por meio de uma soilcitação ao servidor
+                        e exibição deste recurso em uma janela do navegador. Geralmente é
+                        um documento HTML mas pode ser um PDF, ODT, JPG, PNG...</li>
+                    <li>A localização desse recurso é especificada pelo usuário por meio
+                        de um URI (Identificador Uniforme de Recursos).</li>
+                    <li>Características de Interface comuns em todos os navegadores:
+                        <ul>
+                            <li>Barra de endereço para inserir a URI</li>
+                            <li>Botões de navegação (Avançar e Voltar)</li>
+                            <li>Botão para atualizar o documento</li>
+                            <li>Botão da página inicial</li>
+                            <li>Área/Seção de Favoritos</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="inthtml" class="step arvores" data-x="0" data-y="3000" data-rotate="30" data-scale="3">        
+                <h2>Árvore de Análise</h2>
+                <div id="lexica">Análise Lexica (Tokenizador)</div>
+                <div id="sintatica">Análise Sintática</div>
+                <hr class="clear">
+                <div class="arvoredown">Construção da Árvore de Análise (DOM)</div>
+            </div>
+
+            <div id="intrender" class="step arvores" data-x="2500" data-y="8000" data-scale="5">        
+                <h2>Árvore de Renderização</h2>
+                <div>Construção de blocos retangulares</div>
+                <div>Configuração das propriedades visuais (CSS)</div>
+                <hr class="clear">
+                <div class="arvoredown">Construção da Árvore de renderização</div>
+            </div>
+
+            <div id="big" class="step" data-x="4000" data-y="2100" data-rotate="180" data-scale="6">
+                <p>Na renderização, o <b>CSS</b> <span class="thoughts">manda!!!</span></p>
+            </div>
+
+            <div id="tiny" class="step" data-x="4800" data-y="2500" data-z="-4000" data-rotate="300" data-scale="1">
+                <p>Nem sempre dá certo...</p>
+                <img src="../img/csscrazy.jpg" alt="" >
+                <p>E nós ficamos malucos!!!</p>
+            </div>
+
+            <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+                <p>Com CSS podemos controlar a <b class="positioning">posição</b>, 
+                    <b class="rotating">rotação</b> e <b class="scaling">escala</b> dos elementos HTML.
+                </p>
+                <p id="obss">
+                    Obs: desde que o CSS esteja bem estruturado e obedecendo a hierarquia.
+                </p>
+            </div>
+
+            <div id="render" class="step" data-x="8500" data-y="-1000" data-scale="6">
+                <table>
+                    <tr>
+                        <td colspan="2">Árvore de Renderização - CSS</td>
+                    </tr>
+                    <tr>
+                        <td>Seletores</td>
+                        <td>Declarações</td>
+                    </tr>
+                    <tr>
+                        <td>Propriedade</td>
+                        <td>Valor</td>
+                    </tr>
+                </table>
+                <p><strong>Regras para seleção</strong></p>
+                <ul>
+                    <li>A hierarquia dos elementos não tem utilidade para especificação</li>
+                    <li><span>inline</span> > <span>ID</span> > <span>Classe / 
+                            PseudoClasse / Atributo</span> > <span>elemento</span></li>
+                    <li>O important! sobressai qualquer hierarquia, porém na concorrência
+                        com outro important! segue-se a regra acima</li>
+                </ul>
+            </div>
+
+            <div id="layout" class="step slide" data-x="9500" data-y="-4500" data-rotate="30" >
+                <p><strong>Layout</strong></p>
+                <ol>
+                    <li>Utiliza a árvore de renderização para posicionar e definir o 
+                        espaço usado pelo elemento no documento</li>
+                    <li>Processo top > down, left > right.</li>
+                    <li>O elemento pai calcula sua largura</li>
+                    <li>Realiza iteração com o filho:
+                        <ol>
+                            <li>Ajusta a posição (x,y) do elemento filho</li>
+                            <li>Chama o layout do filho, se o mesmo possui "bit incorreto". 
+                                Isto calcula a altura do filho.
+                            </li>
+                        </ol>
+                    </li>
+                    <li>Elemento pai calcula sua altura</li>
+                    <li>Elemento pai calcula seta o "bit incorreto" para falso</li>
+                </ol>
+            </div>
+
+            <div id="relayout" class="step" data-x="8000" data-y="2000" data-rotate="20" data-scale="4">
+                <p>O que pode causar um "re-layout"</p>
+                <ul>
+                    <li>Mudar tamanho da fonte (ex: acessibilidade)</li>
+                    <li>Mudar o tamanho da janela</li>
+                    <li>Adicionar/remover estilos (com JS, por exemplo)</li>
+                    <li>Alterações no DOM</li>
+                </ul>
+                <p>O que fazer para evitar isso?</p>
+                <ul>
+                    <li>Evitar mudanças no topo da hierarquia do documento</li>
+                    <li>Evitar estilos inline</li>
+                    <li>Animar elementos somente se sua posição for fixed ou absoute</li>
+                    <li>Evitar layout em tabela</li>
+                </ul>
+            </div>
+
+            <div id="pintura" class="step" data-x="6000" data-y="8000" data-scale="2">
+                <p>Pintura</p>
+                <ul>
+                    <li>Ordem de pintura <a href="http://www.w3.org/TR/CSS21/zindex.html" target="_blank">
+                            definida pela W3C</a>
+                    </li>
+                </ul>
+                <ol>
+                    <li>cor do plano de fundo</li>
+                    <li>imagem de plano de fundo</li>
+                    <li>borda</li>
+                    <li>filhos</li>
+                    <li>contorno</li>
+                </ol>
+            </div>
+
+            <div id="boxmodel" class="step" data-x="6000" data-y="6000" data-z="-100" data-rotate-x="-40" data-rotate-y="5" data-scale="2">
+                <p><a href="http://www.w3.org/TR/CSS2/box.html" target="_blank">
+                   Box model </a>(Definido no CSS2)</p>
+                <img src="../img/css-box-model.gif" alt="" >
+            </div>
+
+            <div id="boxes" class="step" data-x="9000" data-y="6000" data-scale="4">
+                <p>Posições (css position)</p>
+                <ul>
+                    <li>Estatica</li>
+                    <li>Relativa</li>
+                    <li>Fixa</li>
+                    <li>Absoluta</li>
+                </ul>
+                <p>Tipos de bloxes (css display)</p>
+                <ul>
+                    <li>Block</li>
+                    <li>Inline</li>
+                    <li>None</li>
+                </ul>
+            </div>            
+            
+            <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-150" data-rotate-x="-40" data-rotate-y="5" data-scale="2">
+                <p><span class="you">Você</span> <span class="have">tem</span> 
+                    <span class="noticed">alguma</span> <span class="its">dúvida*</span> 
+                    <span class="in">!important</span>?</p>
+                <span class="footnote">* Não somente dúvidas, mas informações complementares também</span>
+            </div>
+            <div id="fim" class="step slide" data-x="-3000" data-y="4500">
+                <h2>Fim</h2>
+                <p><span>Links interessantes</span></p>
+                <ul>
+                    <li><a href="http://bit.ly/how-browsers-work" target="_blank">bit.ly/how-browsers-work</a></li>
+                    <li><a href="http://browserdiet.com/pt/" target="_blank">browserdiet.com</a></li>
+                    <li><a href="http://devdocs.io" target="_blank">devdocs.io</a></li>
+                    <li><a href="http://net.tutsplus.com/" target="_blank">net.tutsplus.com</a></li>
+                    <li><a href="http://diveintohtml5.com.br/" target="_blank">diveintohtml5.com.br</a></li>
+                    <li><a href="http://www.w3.org/TR/CSS2/sample.html" target="_blank">W3C - CSS2 padrão</a></li>
+                    <li><a href="http://www.whatwg.org/" target="_blank">whatwg.org</a></li>
+                    <li><a href="http://www.webplatform.org/" target="_blank">webplatform.org</a></li>
+                </ul>
+                <p id="fimbottom">
+                    <span>Sheldon Led</span>
+                    <br>
+                    <a href="http://www.sheldonled.com" target="_blank">www.sheldonled.com</a>
+                    <br>
+                    <a href="mailto:sheldonled.ms@gmail.com" target="_blank">sheldonled.ms@gmail.com</a>
+                    <br>
+                    <a href="https://twitter.com/sheldonled" target="_blank">@sheldonled</a>
+                </p>
+            </div>
+
+            <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="20">
+            </div>
+
+        </div>
+        <div class="hint">
+            <p>Entendendo a arquitetura de um Documento web</p>
+        </div>
+        <script src="../tools/impress.js/script.js"></script>
+        <script>impress().init();</script>
+    </body>
+</html>

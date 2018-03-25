@@ -3,148 +3,106 @@
 <head>
   <title>Sheldon Led | Talks</title>
   <!-- Meta -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="author" content="Sheldon Led" />
-  <meta name="description" content="A web developer who lives in 
-            Goiânia-GO (Brazil) ever trying to learn a little about front-end.
-            This is my web site and there're some portuguese content.
-            By the way: I DO NOT SELL LED'S. " />
-  <meta name="keywords" content="Sheldon Led, sheldonled, 
-        Sheldon Led Martins e Silva, web developer, freela, freelance, 
-        webdesigner freelance, fazer meu site, xhtml, tableless, site 
-        tableless, css, jquery, wordpress, geek, software livre, portfolio, 
-        User experience, usabilidade, padrões web, front-end, 
-        development, desenvolvimento, startup, projetos, linux, " />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Sheldon Led">
+  <meta name="description" content="Sheldon Led is a Front End Engineer from Brazil living in Dublin, Ireland. He's been involved with the Free and Open Source Software community in Brazil for 9+ years, volunteering with conference organizing, speaking, and code workshops. For the last 3 years Sheldon has focused on a Front End career which brought him to Ireland to face new challenges.">
   <!-- Viewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Icon -->
-  <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
-  <!-- Facebook -->
+  <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+  <!-- Open Graph -->
   <meta property="og:title" content="Sheldon Led"/>
   <meta property="og:site_name" content="Sheldon Led"/>
   <meta property="og:url" content="http://sheldonled.com"/>
   <meta property="og:image" content="http://sheldonled.com/assets/img/sheldonled-profilephoto.jpg"/>
   <meta property="og:type" content="blog"/>
-  <meta property="og:description" content="Sheldon Led's personal web site.
-          Feel free to get contents here, and share knowledge."/>
-  <!-- Font -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <link href="fonts/letteromagic/stylesheet.css" rel="stylesheet" type="text/css" />
-  <link href="fonts/icomoon/style.css" rel="stylesheet" type="text/css" />
+  <meta property="og:description" content="Sheldon Led's personal web site."/>
   <!-- Style -->
-  <link href="http://sheldonled.com/dist/style.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="dist/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="dist/css/app.css?250320182359" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
-  <header class="header talks">
-    <nav class="menu" role="navigation">
-      <ul>
-        <li class="nav-item"><a href="http://sheldonled.com/about">About me</a></li>
-        <li class="nav-item"><a class="active" href="http://github.sheldonled.com/talks">Talks</a></li>
-        <li class="nav-item"><a href="http://github.sheldonled.com">Projects</a></li>
-      </ul>
-      <div class="flags">
-        <a id="en"></a>
-        <a href="br/" id="pt"></a>
-      </div>
-      <div class="clear"></div>
-    </nav>
-    <a href="http://sheldonled.com">
-      <img class="logo" src="img/logow.png" alt="Site logo" />
-    </a>
-    <h1 class="text-center">SHELDON LED</h1>
-  </header>
-  <h2>Talks</h2>
-  <section class="talks">
-    <div class="talk moneyfs">
-      <!-- https://logomakr.com/9LYDdX -->
-      <img src="img/floss.png" alt="15 ways of making money with Free Software">
-      <h3>15 ways of making money with Free Software</h3>
-    </div>
-    <div class="talk googledrive">
-      <img src="img/googledrive.png" alt="Google Drive API">
-      <h3>Google Drive API</h3>
-    </div>
-    <div class="talk mozcontribute">
-      <img src="img/Fx-logo.png" alt="How to contribute with Mozilla">
-      <h3>How to contribute with Mozilla</h3>
-    </div>
-    <div class="talk conndev">
-      <img src="img/mozilla-ow.jpg" alt="Mozilla Connected Devices">
-      <h3>Mozilla Connected Devices</h3>
-    </div>
-    <div class="clear"></div>
+  <section class="top-pannel">
+    <noscript>
+      <style>.top-pannel{display: block}</style>
+      Apparently you don't have Javascript enabled. Unfortunately this website doesn't work without it =/
+    </noscript>
   </section>
-  <div class="wrap">
-    <section class="howtoedit">
-      <h3>
-        <a name="how-to-edit" class="anchor" href="#how-to-edit"></a>
-        How to edit the talks.
-      </h3>
-      <p>All files are in gh-pages branch in my <a href="https://github.com/sheldonled/talks">talks repository</a>, so you need to clone this branch, and not the master one.
-                <pre>
-                    <code>
-## Go to your web directory
-$ cd /var/www
-## do the clone on gh-pages
-$ git clone https://github.com/sheldonled/talks.git -b gh-pages
-                    </code>
-                </pre>
+  <header class="site-header">
+    <div class="site-wrapper">
+      <a href="//sheldonled.com" class="site-logo">
+        <svg class="icon__site-logo"><use xlink:href="img/symbol-defs.svg#logo-sheldonled"></use></svg>
+        <span class="site-logo__text">Sheldon Led</span>
+      </a>
+      <nav class="main-navigation">
+        <a class="main-navigation__item" target="_blank" href="https://medium.com/@sheldonled">Blog</a>
+        <a class="main-navigation__item main-navigation__item--active" href="//github.sheldonled.com/talks">Talks</a>
+        <a class="main-navigation__item" href="//github.sheldonled.com">Projects</a>
+      </nav>
+      <div class="config__button">
+        <svg class="icon__settings"><use xlink:href="img/symbol-defs.svg#icon-settings"></use></svg>
+      </div>
+      <section class="config__menu">
+        <header class="config__header">Languages</header>
+        <a class="config__item config__item--br" href="br">Portuguese</a>
+        <a class="config__item config__item--en" href="">English</a>
+      </section>
+    </div>
+  </header>
+  <div class="site-wrapper">
+    <section class="site-talks">
+      Loading Presentations...
     </section>
   </div>
-  <footer id="footer">
+  <footer class="site-footer">
     <section class="social">
-        <a href="https://github.com/sheldonled" target="_blank">
-            <span class="icon-github"></span>
-        </a>
-        <a href="http://twitter.com/sheldonled" target="_blank">
-            <span class="icon-twitter"></span>
-        </a>
-        <a href="http://facebook.com/sheldonled" target="_blank">
-            <span class="icon-facebook"></span>
-        </a>
-        <a href="https://plus.google.com/+SheldonLed" target="_blank">
-            <span class="icon-google-plus"></span>
-        </a>
-        <a href="http://www.linkedin.com/in/sheldonled" target="_blank">
-            <span class="icon-linkedin"></span>
-        </a>
-        <a href="mailto:sheldonled.ms@gmail.com">
-            <span class="icon-mail"></span>
-        </a>
-        <a href="skype:sheldonled">
-            <span class="icon-skype"></span>
-        </a>
-        <a href="http://instagram.com/sheldonled" target="_blank">
-            <span class="icon-instagram"></span>
-        </a>
-        <a href="http://www.youtube.com/sheldonled" target="_blank">
-            <span class="icon-youtube"></span>
-        </a>        
+      <a target="_blank" href="https://github.com/sheldonled" class="social__link">
+        <svg class="icon__github"><use xlink:href="img/symbol-defs.svg#icon-github"></use></svg>
+      </a>
+      <a target="_blank" href="https://twitter.com/sheldonled" class="social__link">
+        <svg class="icon__twitter"><use xlink:href="img/symbol-defs.svg#icon-twitter"></use></svg>
+      </a>
+      <a target="_blank" href="https://linkedin.com/in/sheldonled" class="social__link">
+        <svg class="icon__linkedin"><use xlink:href="img/symbol-defs.svg#icon-linkedin"></use></svg>
+      </a>
+      <a target="_blank" href="https://instagram.com/sheldonled" class="social__link">
+        <svg class="icon__instagram"><use xlink:href="img/symbol-defs.svg#icon-instagram"></use></svg>
+      </a>
+      <a target="_blank" href="https://facebook.com/sheldonled" class="social__link">
+        <svg class="icon__facebook"><use xlink:href="img/symbol-defs.svg#icon-facebook"></use></svg>
+      </a>
+      <a target="_blank" href="mailto:sheldonled.ms@gmail.com" class="social__link">
+        <svg class="icon__mail"><use xlink:href="img/symbol-defs.svg#icon-mail"></use></svg>
+      </a>
+      <a target="_blank" href="https://youtube.com/user/sheldonled" class="social__link">
+        <svg class="icon__mail"><use xlink:href="img/symbol-defs.svg#icon-video"></use></svg>
+      </a>
     </section>
-    <p>Sheldon led | 2016</p>
-</footer>
-  <section id="prjDetails">
-    <div class="close"></div>
-    <h2 id="detail-prjName"></h2>
-    <img src="" alt="" id="detail-prjImg">
-    <p id="detail-prjUrl">
-      <a href="" target="_blank" id="detail-prjSlides">slides</a> 
-      <span id="detail-spnEssay"> | <a href="" target="_blank" id="detail-prjEssay">essay</a></span>
-      <span id="detail-spnVideo"> | <a href="" target="_blank" id="detail-prjVideo">vídeo</a></span>
-    </p>
-    <article id="detail-prjDesc"></article>
-  </section>
+    <section class="site-footer__message">
+      <p>Sheldon Led | 2018</p>
+    </section>
+  </footer>
+  <!-- SCRIPTS Go here -->
+  <script>
+    /* loadJS */
+    (function(w){var loadJS=function(src,cb){"use strict";var ref=w.document.querySelector("script");var script=w.document.createElement("script");script.src=src;script.async=true;ref.parentNode.insertBefore(script,ref);if(cb&&typeof cb==="function"){script.onload=cb}return script};w.loadJS=loadJS})(window);
+    function supportEs6() {"use strict";try { eval("let foo = (x)=>x+1"); }catch (e) { return false; }return true;}
+    if(supportEs6()) {
+      loadJS("dist/js/app.min.js?250320182359");
+    } else {
+      //strategy for old browsers
+      loadJS("https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.find",function(){
+        loadJS("lib/svgxuse.min.js?250320182359");
+        loadJS("dist/js/es5app.min.js?250320182359");
+      });
+    }
+    /* load Google Analytics */
+    loadJS("https://www.googletagmanager.com/gtag/js?id=UA-115864900-1", function() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-115864900-1');
+    });
+  </script>
 </body>
-<script>
-  (function(L,e,d,l,a,b,s){L['GoogleAnalyticsObject']=a;L[a]=L[a]||function(){
-  (L[a].q=L[a].q||[]).push(arguments)},L[a].l=1*new Date();b=e.createElement(d),
-  s=e.getElementsByTagName(d)[0];b.bsync=1;b.src=l;s.parentNode.insertBefore(b,s)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-47034486-1', 'auto');
-    ga('send', 'pageview');
-</script>
-  <!-- JavaScript -->
-  <script src="dist/main.js" ></script>
 </html>

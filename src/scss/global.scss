@@ -1,0 +1,63 @@
+//************ General Styles ****************
+html,
+body {
+  -webkit-overflow-scrolling: touch;// sass-lint:disable-line no-vendor-prefixes
+  background-color: $ghost;
+  color: $oil;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen-Sans, Ubuntu, Cantarell, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 0 0 6.5rem; //footer size
+  position: absolute;
+  width: 100vw;
+}
+
+::selection {
+  background: $rgba-primary-4;
+  color: $white;
+}
+
+[class*='icon__'] {
+  display: inline-block;
+  fill: currentColor;
+  height: 1em;
+  stroke: currentColor;
+  stroke-width: 0;
+  width: 1em;
+}
+
+b,
+strong {
+  font-weight: 900;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  &:visited {
+    color: inherit;
+  }
+
+}
+
+button:hover,
+button:focus,
+a:hover,
+a:focus {
+  color: $black;
+  cursor: pointer;
+  outline: 2px dashed $oil;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.site-wrapper {
+  margin: 0 auto;
+  max-width: 120rem;
+  width: 100%;
+}

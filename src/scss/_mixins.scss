@@ -1,0 +1,37 @@
+//***********************Mixins********************
+//sass-lint:disable no-vendor-prefixes, no-duplicate-properties
+
+@mixin grid {
+  display: -ms-grid;
+  display: grid;
+}
+@mixin grid-template-columns($value) {
+  -ms-grid-columns: $value;
+  grid-template-columns: $value;
+}
+@mixin grid-template-rows($value) {
+  -ms-grid-rows: $value;
+  grid-template-rows: $value;
+}
+
+@mixin grid-column($value, $span: null) {
+  -ms-grid-column: $value;
+
+  @if ($span) {
+    -ms-grid-column-span: $span;
+    grid-column: #{$value} / span #{$span};
+  } @else {
+    grid-column: $value;
+  }
+}
+
+@mixin grid-row($value, $span: null) {
+  -ms-grid-row: $value;
+
+  @if ($span) {
+    -ms-grid-row-span: $span;
+    grid-row: #{$value} / span #{$span};
+  } @else {
+    grid-row: $value;
+  }
+}
