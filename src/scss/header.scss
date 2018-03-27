@@ -86,6 +86,7 @@
   font-size: 1.5rem;
   justify-content: flex-end;
   margin: 0;
+  pointer-events: all;
   position: absolute;
   right: 1rem;
   top: .5rem;
@@ -93,20 +94,14 @@
   @include grid-column(2);
   @include grid-row(1);
 
+  > * {
+    pointer-events: none;
+  }
   .icon__settings:hover,
   .icon__settings:focus {
     color: $black;
     cursor: pointer;
     outline: 2px dashed $oil;
-  }
-
-  .icon__settings {
-    pointer-events: all;
-
-    > * {
-      pointer-events: none;
-    }
-
   }
 
 }
