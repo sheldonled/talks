@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/sheldonled/talks#readme",
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.42",
-    "@babel/preset-env": "^7.0.0-beta.42",
-    "eslint": "^4.19.0",
-    "node-sass": "^4.7.2",
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "eslint": "^4.19.1",
+    "node-sass": "^4.9.0",
     "rollup": "^0.57.1",
     "sass-lint": "^1.12.1",
     "uglify-es": "^3.3.9"
