@@ -1,32 +1,21 @@
-<html>
+<!doctype html>
 <html lang="en">
-
     <head>
         <meta charset="utf-8">
-
         <title>Google Drive API – Sheldon Led</title>
-
-        <meta name="description" content="An introduction to Google Drive API and how to integrate it with your application">
-        <meta name="author" content="Hakim El Hattab">
-
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <link rel="stylesheet" href="tools/reveal.js/css/reveal.css">
-        <link rel="stylesheet" href="tools/reveal.js/css/theme/white-google.css" id="theme">
-        <link rel="stylesheet" href="fonts/icomoon/style.css" id="icons">
-
-        <!-- Theme used for syntax highlighting of code -->
-        <link rel="stylesheet" href="tools/reveal.js/lib/css/zenburn.css">
+        <link rel="stylesheet" href="../tools/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="../tools/reveal.js/css/theme/white-google.css" id="theme">
 
         <!-- Printing and PDF exports -->
         <script>
             var link = document.createElement( 'link' );
             link.rel = 'stylesheet';
             link.type = 'text/css';
-            link.href = window.location.search.match( /print-pdf/gi ) ? 'tools/reveal.js/css/print/pdf.css' : 'tools/reveal.js/css/print/paper.css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? '../tools/reveal.js/css/print/pdf.css' : '../tools/reveal.js/css/print/paper.css';
             document.getElementsByTagName( 'head' )[0].appendChild( link );
         </script>
 
@@ -38,7 +27,7 @@
         <div class="reveal">
             <div class="slides">
                 <section>
-                    <img src="img/google_drive.png" alt="Google Drive">
+                    <img src="../img/google_drive.png" alt="Google Drive">
                     <h1>API</h1>
                     <h5>An introduction to Google Drive API and how to integrate it with your application</h5>
                     <p><a href="http://www.sheldonled.com" target="_blank">Sheldon Led</a></p>
@@ -106,7 +95,7 @@
                     </ul>
                 </section>
                 <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-                    <img src="img/google_drive.png" alt="Google Drive" style="width: 500px;margin-top: 30%;">
+                    <img src="../img/google_drive.png" alt="Google Drive" style="width: 500px;margin-top: 30%;">
                 </section>
                 <section>
                     <h2>Huge Possibilities</h2>
@@ -200,8 +189,8 @@
                 </section>
             </div>
         </div>
-        <script src="tools/reveal.js/lib/js/head.min.js"></script>
-        <script src="tools/reveal.js/js/reveal.js"></script>
+        <script src="../tools/reveal.js/lib/js/head.min.js"></script>
+        <script src="../tools/reveal.js/js/reveal.js"></script>
         <script>
             Reveal.initialize({
                 controls: true,
@@ -211,7 +200,7 @@
 
                 transition: 'slide', // none/fade/slide/convex/concave/zoom
                 dependencies: [
-                    { src: 'tools/reveal.js/plugin/notes/notes.js', async: true }
+                    { src: '../tools/reveal.js/plugin/notes/notes.js', async: true }
             ]});
         </script>
     </body>

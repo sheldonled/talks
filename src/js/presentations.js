@@ -22,9 +22,10 @@ export default [
     "article": "",
     "video": "",
     "description": {
-      "en": ``,
+      "en": `<p>In 2015 it was announced that Firefox OS effort would move towards IoT, a big trend to explore and we could leverage the Firefox OS way of using the Web to build stuff. In this talk it'll be presented a few details on how to know Mozilla IoT projects, what's happening already and what'll be the future.</p>`,
 
-      "pt-BR": ``,
+      "pt-BR": `<p>No ano de 2015 foi anunciado que o sistema operacional Firefox OS começaria a focar na internet das coisas, um grande mercado a ser explorado principalmente pelo Firefox OS e todo seu conceito de ser construído com linguagens web. Nesta atividade será apresentado todos os detalhes necessários para conhecer projetos da Mozilla focados na IoT. Confira o que já está pronto e o que já pode ser feito utilizando o Firefox OS como base para a IoT
+      </p>`,
     },
   },
   {
@@ -36,9 +37,10 @@ export default [
     "article": "",
     "video": "",
     "description": {
-      "en": ``,
+      "en": `<p>In 2015 it was announced that Firefox OS effort would move towards IoT, a big trend to explore and we could leverage the Firefox OS way of using the Web to build stuff. In this talk it'll be presented a few details on how to know Mozilla IoT projects, what's happening already and what'll be the future.</p>`,
 
-      "pt-BR": ``,
+      "pt-BR": `<p>No ano de 2015 foi anunciado que o sistema operacional Firefox OS começaria a focar na internet das coisas, um grande mercado a ser explorado principalmente pelo Firefox OS e todo seu conceito de ser construído com linguagens web. Nesta atividade será apresentado todos os detalhes necessários para conhecer projetos da Mozilla focados na IoT. Confira o que já está pronto e o que já pode ser feito utilizando o Firefox OS como base para a IoT
+      </p>`,
     },
   },
   {
@@ -50,9 +52,10 @@ export default [
     "article": "https://medium.com/@sheldonled/volunteering-with-mozilla-20737756d439",
     "video": "",
     "description": {
-      "en": ``,
+      "en": `<p>The aim of this talk is to inspire and help people and groups to embrace the Mozilla mission and colaborate with their products and projects for the open web. It's presented the main Mozilla projects and how Mozilla Brazil has been working so far. Get involved and start today to contribute with Mozilla</p>`,
 
-      "pt-BR": ``,
+      "pt-BR": `<p>A intenção dessa palestra é inspirar, ajudar e emancipar pessoas e grupos para que possam abraçar a missão da Mozilla e colaborar com seus produtos e projetos livres. Serão apresentados os principais projetos da Mozilla e será abordado o que a comunidade Mozilla Brasil tem feito. Envolva-se e comece hoje mesmo a contribuir com a Mozilla. 
+      </p>`,
     },
   },
   {
@@ -74,7 +77,7 @@ export default [
     "conference": "joinCommunity",
     "venue": "FATESG/SENAI, Goiânia, Brazil",
     "title": "Google Drive API.",
-    "presentation": "",
+    "presentation": "http://github.sheldonled.com/talks/p/gdrive-easydg.html",
     "article": "",
     "video": "",
     "description": {
@@ -164,9 +167,9 @@ export default [
     "article": "",
     "video": "",
     "description": {
-      "en": ``,
+      "en": `<p>It's very exciting to see how the web has evolved along the years, mostly when it comes to its audiovisual capacity. The Audio Web API gives developers a very powerful and versatile system to control audio on the web, allowing developers to sintetize, process, mix, add effects and much more, with audio. It very promising to use it and avoid third party APIs to use such features on the web. The aim of this talk is to show a little bit of the Web Audio API and a few of what it's capable of </p>`,
 
-      "pt-BR": ``,
+      "pt-BR": `<p> É animador ver a evolução da Web ao longo dos anos, principalmente quando se trata de sua capacidade audiovisual. A API de audio para a Web disponibiliza um poderoso e versátil sistema de controle de áudio para a Web, permitindo aos desenvolvedores sintetizar, processar, mixar, adicionar efeitos de áudio, criar reprodutores de áudio etc, dispensando a necessidade de API’s de terceiros para tais recursos na Web. O objetivo desta palestra é mostrar um pouco da API de áudio para a web, e algumas de suas capacidades </p>`,
     },
   },
   {
@@ -236,6 +239,18 @@ export default [
     "description": {
       "en": ``,
       "pt-BR": ``,
+    },
+  },
+  {
+    "date": "2013-09-13",
+    "conference": "Presentation for Information Systems Students",
+    "venue": "Faculdade Alfa, Goiânia, Brazil",
+    "title": "Exploring the Web Mobile.",
+    "presentation": "http://github.sheldonled.com/talks/p/webmobile.html",
+    "description": {
+      "en": `<p>In the last couple of years the web access via mobile has grown a lot. The web also has evolved a lot and brings several resources that make its usage more friendly. The aim of this presentation is to show a few tips for web development, thinking more about people who access it via mobile devices, and also show a few ways of building apps using only web technologies.</p>`,
+
+      "pt-BR": `<p> Nos últimos anos o acesso à web com dispositivos mobile tem crescido muito. A web também evoluiu muito e traz vários recursos que tornam seu uso mais agradável. O Objetivo dessa apresentação é mostrar algumas dicas de desenvolvimento web, pensando em quem acessa via dispositivos móveis, e finalizar mostrando maneiras de construir aplicativos utilizando apenas tecnologias web. </p>`,
     },
   },
   {
