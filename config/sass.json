@@ -1,0 +1,7 @@
+{
+  "file": "src/scss/app.scss",
+  "output": "dist/css/app.css",
+  "precision": 5,
+  "outputStyle": "compressed",
+  "sourceMap": true
+}
