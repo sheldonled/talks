@@ -10,6 +10,7 @@
 
   <link rel="stylesheet" href="../tools/reveal.js/css/reveal.css">
   <link rel="stylesheet" href="../tools/reveal.js/css/theme/white-google.css" id="theme">
+  <link rel="stylesheet" href="../src/css/gdrive.css" id="theme">
 
   <!-- Printing and PDF exports -->
   <script>
@@ -46,31 +47,124 @@
         </ul>
       </section>
       <section>
+        <section>
+          <h2>The need</h2>
+          <ul>
+            <li class="fragment">Large scale print</li>
+            <li class="fragment">How to send hundres of files daily to the print shop?</li>
+          </ul>
+        </section>
+        <section>
+          <ul>
+            <li class="fragment">E-mail attachment? Not quite feasible.</li>
+            <li class="fragment">In-house solution to upload/download these files?</li>
+            <li class="fragment">WebService / API</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Cloud storage service</h2>
+        </section>
+      </section>
+      <section>
+        <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+          <img src="../img/google_drive.png" alt="Google Drive" style="width: 500px;margin-top: 30%;">
+        </section>
+        <section>
+          <h2>Easy Integration</h2>
+          <ul>
+            <li class="fragment">HTTP</li>
+            <li class="fragment">Client libraries in several programming languages</li>
+            <li class="fragment">
+              Your app in the context menu
+              <strong style="background-color:rgba(0, 102, 204, 0.3);border-radius: 50%;padding: 1px 10px;transform: rotate(45deg);display: inline-block;">
+                <span class="green">:</span>
+                <span class="yellow">)</span>
+              </strong>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Client Libraries</h2>
+          <ul>
+            <li>.NET</li>
+            <li>Android</li>
+            <li>Go</li>
+            <li>iOS</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>Node.js</li>
+            <li>PHP</li>
+            <li>Python</li>
+            <li>Ruby</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Getting Started</h2>
+          <ul>
+            <li class="fragment">Go to the
+              <a href="https://console.developers.google.com" target="_blank">Google Developers Console</a>.</li>
+            <li class="fragment">
+              <a href="https://console.developers.google.com/start/api?id=drive" target="_blank">Create a project</a> and set the credentials</li>
+            <li class="fragment">Go to the
+              <a href="https://developers.google.com/drive/" target="_blank">Google Developers Portal</a>, check the
+              <a href="https://developers.google.com/drive/" target="_blank">Google Drive APIs</a>
+            </li>
+            <li class="fragment">
+              <a href="https://developers.google.com/drive/v3/web/about-sdk" target="_blank">Chose your SDK</a> and download it.</li>
+            <li class="fragment">Do the sample code, and check
+              <a href="https://github.com/googledrive" target="_blank">Google Drive on Github</a>
+            </li>
+            <li class="fragment">Also, check my sample of
+              <em>Upload, Download, List and Delete</em> files using
+              <span class="green">PHP</span> SDK. It's called
+              <a href="https://github.com/sheldonled/easygd" target="_blank" style="background-color: #A7A7A7; padding: 0 5px">
+                <span class="green">Easy</span>
+                <span class="yellow">GD</span>
+              </a> and it's also available on
+              <a href="https://github.com/sheldonled/easygd" target="_blank">Github</a>.
+          </ul>
+        </section>
+        <section>
+          <h2>Sample from <a href="https://developers.google.com/drive/v3/web/quickstart/js" target="_blank">Quickstart Page</a></h2>
+          <p>
+            Uploading files to <a href="https://drive.google.com/drive/folders/1LYS8YFGIYVh4H1JXUgUghgxkljzUnKld" target="_blank">public folder on Google Drive</a>
+          </p>
+        </section>
+      </section>
+      <section>
         <h1>THANKS</h1>
         <p>
           <a href="http://www.sheldonled.com" target="_blank">www.sheldonled.com</a>
         </p>
         <div class="social">
-          <a href="https://github.com/sheldonled" target="_blank">
-            <span class="icon-github"></span>
+          <a target="_blank" href="https://github.com/sheldonled" class="social__link">
+            <svg class="icon__github">
+              <use xlink:href="../img/symbol-defs.svg#icon-github"></use>
+            </svg>
           </a>
-          <a href="http://twitter.com/sheldonled" target="_blank">
-            <span class="icon-twitter"></span>
+          <a target="_blank" href="https://twitter.com/sheldonled" class="social__link">
+            <svg class="icon__twitter">
+              <use xlink:href="../img/symbol-defs.svg#icon-twitter"></use>
+            </svg>
           </a>
-          <a href="http://facebook.com/sheldonled" target="_blank">
-            <span class="icon-facebook"></span>
+          <a target="_blank" href="https://linkedin.com/in/sheldonled" class="social__link">
+            <svg class="icon__linkedin">
+              <use xlink:href="../img/symbol-defs.svg#icon-linkedin"></use>
+            </svg>
           </a>
-          <a href="http://www.linkedin.com/in/sheldonled" target="_blank">
-            <span class="icon-linkedin"></span>
+          <a target="_blank" href="https://instagram.com/sheldonled" class="social__link">
+            <svg class="icon__instagram">
+              <use xlink:href="../img/symbol-defs.svg#icon-instagram"></use>
+            </svg>
           </a>
-          <a href="mailto:sheldonled@gmail.com">
-            <span class="icon-mail"></span>
-          </a>
-          <a href="http://instagram.com/sheldonled" target="_blank">
-            <span class="icon-instagram"></span>
+          <a target="_blank" href="https://facebook.com/sheldonled" class="social__link">
+            <svg class="icon__facebook">
+              <use xlink:href="../img/symbol-defs.svg#icon-facebook"></use>
+            </svg>
           </a>
         </div>
-      </section>
     </div>
   </div>
   <script src="../tools/reveal.js/lib/js/head.min.js"></script>
