@@ -127,10 +127,224 @@
           </ul>
         </section>
         <section>
-          <h2>Sample from <a href="https://developers.google.com/drive/v3/web/quickstart/js" target="_blank">Quickstart Page</a></h2>
+          <!-- styles for live demo -->
+          <style>
+            #content {
+              min-height: 50vh;
+            }
+          </style>
+          <h2>Live Demo</h2>
           <p>
-            Uploading files to <a href="https://drive.google.com/drive/folders/1LYS8YFGIYVh4H1JXUgUghgxkljzUnKld" target="_blank">public folder on Google Drive</a>
+            Uploading files to
+            <a href="https://drive.google.com/drive/folders/1LYS8YFGIYVh4H1JXUgUghgxkljzUnKld" target="_blank">public folder on Google Drive</a>
           </p>
+          <!-- Add buttons to initiate auth sequence and sign out -->
+          <button id="authorize-button" style="display: none;">Authorize</button>
+          <button id="signout-button" style="display: none;">Sign Out</button>
+        
+          <!-- Form to upload files -->
+          <form id="upload-form" style="display: none;">
+            <p>Upload from the computer</p>
+            <input id="upload-file" type="file">
+            <p>Upload from url:</p>
+            <input id="upload-text" type="text">
+            <button id="upload-button" type="button">Upload</button>
+          </form>
+        
+          <!-- Content div to show list of files -->
+          <div id="content"></div>
+        
+          <script type="text/javascript">
+            class QuickStart {
+              constructor() {
+                // Client ID and API key from the Developer Console
+                this.CLIENT_ID = '876770809142-79puqm6ukd5ilipcthvsq3caekss0gqe.apps.googleusercontent.com';
+                this.API_KEY = 'AIzaSyDlqgz4EKBA7mqxlHGB8Rbo7sIk40BOksA';
+                // Authorization scopes required by the API
+                this.SCOPES = 'https://www.googleapis.com/auth/drive.file';
+        
+                //The folder to work with
+                this.FOLDER_ID = '1LYS8YFGIYVh4H1JXUgUghgxkljzUnKld';
+        
+                //sign-in state buttons
+                this.authorizeButton = document.querySelector('#authorize-button');
+                this.signoutButton = document.querySelector('#signout-button');
+                this.uploadForm = document.querySelector('#upload-form');
+                this.uploadInputFile = document.querySelector('#upload-file');
+                this.uploadInputText = document.querySelector('#upload-text');
+                this.uploadButton = document.querySelector('#upload-button');
+                this.contentContainer = document.querySelector('#content');
+              };
+        
+              /**
+               *  On load, called to load the auth2 library and API client library.
+               */
+              handleClientLoad() {
+                gapi.load('client:auth2', () => gapi.client.load('drive', 'v3', this.initClient.bind(this)));
+              };
+        
+              /**
+               *  Initializes the API client library and sets up sign-in state listeners.
+               */
+              initClient() {
+                gapi.client.init({
+                  apiKey: this.API_KEY,
+                  clientId: this.CLIENT_ID,
+                  scope: this.SCOPES,
+                }).then(() => {
+                  // Listen for sign-in state changes.
+                  gapi.auth2.getAuthInstance().isSignedIn.listen(this.updateSigninStatus);
+                  this.setSignInListeners();
+                  // Handle the initial sign-in state.
+                  this.updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+                });
+              };
+        
+              //Sets up sign-in state listeners.
+              setSignInListeners() {
+                document.addEventListener('click', evt => {
+                  if (evt.target.id === this.authorizeButton.id)
+                    gapi.auth2.getAuthInstance().signIn();
+        
+                  if (evt.target.id === this.signoutButton.id)
+                    gapi.auth2.getAuthInstance().signOut();
+        
+                  if (evt.target.id === this.uploadButton.id)
+                    this.uploadFile();
+        
+                });
+              };
+        
+              /**
+               *  Called when the signed in status changes, to update the UI
+               *  appropriately. After a sign-in, the API is called.
+               */
+              updateSigninStatus(isSignedIn) {
+                this.authorizeButton.style.display = isSignedIn ? 'none' : 'block';
+                this.signoutButton.style.display = isSignedIn ? 'block' : 'none';
+                this.uploadForm.style.display = isSignedIn ? 'block' : 'none';
+        
+                if (!isSignedIn) return;
+                this.getAllFiles();
+              };
+        
+              /**
+               * Gets all files from the folder ID
+               */
+              getAllFiles(request, result) {
+                const query = `'${this.FOLDER_ID}' in parents and (trashed != true)`;
+        
+                if (!request) {
+                  this.getAllFiles(gapi.client.request({
+                    'path': '/drive/v3/files',
+                    'method': 'GET',
+                    'params': { q: query },
+                  }), []);
+                  return;
+                }
+        
+                request.execute(resp => {
+                  result = result.concat(resp.files);
+                  let nextPageToken = resp.nextPageToken;
+                  if (!nextPageToken) {
+                    this.renderFileList(result);
+                    return;
+                  }
+        
+                  this.getAllFiles(gapi.client.request({
+                    'path': '/drive/v3/files',
+                    'method': 'GET',
+                    'params': { q: query },
+                  }), result);
+                });
+              };
+        
+              renderFileList(files) {
+                if (files.length === 0) {
+                  this.contentContainer.innerHTML = "<p><strong>The folder is Empty</strong></p>";
+                  return;
+                }
+        
+                const content = files.reduce((list, file) => list += `<li> ${file.name} </li>`, '<ul>');
+        
+                this.contentContainer.innerHTML = `${content}</ul>`;
+        
+              };
+        
+              uploadFile() {
+                if (this.uploadInputFile.files[0])
+                  this.uploadFromComputer();
+                else
+                  this.uploadFromUrl();
+        
+                this.uploadForm.reset();
+              };
+        
+              uploadFromComputer() {
+                const file = this.uploadInputFile.files[0];
+                this.readFileAndSendToGoogleDrive(file, file);
+              };
+        
+              uploadFromUrl() {
+                const url = this.uploadInputText.value,
+                      urlParts = url.split("/"),
+                      fileInfo = {
+                        name: decodeURIComponent(urlParts[urlParts.length-1])
+                      };
+        
+                fetch(url).then(response => {
+                  if(response.ok) return response.blob();
+                  throw new Error('Network response was not ok.');
+                }).then(myBlob => {
+                  fileInfo.type = myBlob.type;
+                  this.readFileAndSendToGoogleDrive(myBlob, fileInfo);
+                });
+              };
+        
+              readFileAndSendToGoogleDrive(file, fileInfo) {
+                  const filereader = new FileReader();
+                  filereader.onloadend = event => this.sendFileToGoogleDrive(event, fileInfo);
+                  filereader.readAsBinaryString(file);
+              }
+        
+              sendFileToGoogleDrive(event, file) {
+                const base64Data = btoa(event.target.result),
+                      boundary = '-whatever-you-want-',
+                      fileMetadata = {
+                        'name': file.name,
+                        'mimeType': file.type,
+                        'parents': [this.FOLDER_ID]
+                      };
+        
+                gapi.client.request({
+                  'path': '/upload/drive/v3/files',
+                  'method': 'POST',
+                  'params': { 'uploadType': 'multipart' },
+                  'headers': {
+                    'Content-Type': 'multipart/related; boundary="' + boundary + '"'
+                  },
+                  'body': `--${boundary}
+                        Content-Type: application/json
+                        
+                        ${JSON.stringify(fileMetadata)}
+                        --${boundary}
+                        Content-Type: ${fileMetadata.mimeType}
+                        Content-Transfer-Encoding: base64
+                        
+                        ${base64Data}
+                        --${boundary}--
+                    `.replace(/((?![\r\n])\s){2,}/g, ""),//Removing spaces
+                })
+                  .execute(file => this.getAllFiles());
+              };
+        
+            };
+            const quickstart = new QuickStart();
+          </script>
+        
+          <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};quickstart.handleClientLoad()"
+            onreadystatechange="if (this.readyState === 'complete') this.onload()">
+            </script>
         </section>
       </section>
       <section>
