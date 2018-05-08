@@ -102,27 +102,66 @@
           </ul>
         </section>
         <section>
-          <!-- styles for live demo -->
-          <style>
-            #content {
-              min-height: 50vh;
-            }
-          </style>
           <h2>Live Demo</h2>
           <p>
             Uploading files to
             <a href="https://drive.google.com/drive/folders/1LYS8YFGIYVh4H1JXUgUghgxkljzUnKld" target="_blank">public folder on Google Drive</a>
           </p>
+          <!-- styles for live demo -->
+          <style>
+            #content {
+              min-height: 50vh;
+            }
+            #authorize-button,
+            #signout-button,
+            #upload-button {
+              border-radius: .315rem;
+              background-color: #09A960;
+              padding: .5rem;
+              width: 10rem;
+              margin: 0 auto;
+              color: #fff;
+              cursor: pointer;
+              box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,0.2);
+              border: 1px solid #085130;
+              height: 2rem;
+              display: block;
+            }
+            #signout-button {
+              background-color: #408CD9;
+            }
+            #upload-file,
+            #upload-text {
+              border: 1px solid #09A960;
+              height: 2rem;
+              width: 20rem;
+              margin: 0 0 0 2rem;
+            }
+            label {
+              display: flex;
+              justify-content: flex-end;
+              width: 100%;
+            }
+            #upload-form {
+              margin: 2rem 0;
+              padding: 2rem;
+              border: 1px solid #085130;
+            }
+          </style>
           <!-- Add buttons to initiate auth sequence and sign out -->
           <button id="authorize-button" style="display: none;">Authorize</button>
           <button id="signout-button" style="display: none;">Sign Out</button>
         
           <!-- Form to upload files -->
           <form id="upload-form" style="display: none;">
-            <p>Upload from the computer</p>
-            <input id="upload-file" type="file">
-            <p>Upload from url:</p>
-            <input id="upload-text" type="text">
+            <label for="upload-file">
+              <span>Upload from the computer:</span>
+              <input id="upload-file" type="file">
+            </label>
+            <label for="upload-text">
+              <span>Upload from url:</span>
+              <input id="upload-text" type="text">
+            </label>
             <button id="upload-button" type="button">Upload</button>
           </form>
         
@@ -168,7 +207,7 @@
                   scope: this.SCOPES,
                 }).then(() => {
                   // Listen for sign-in state changes.
-                  gapi.auth2.getAuthInstance().isSignedIn.listen(this.updateSigninStatus);
+                  gapi.auth2.getAuthInstance().isSignedIn.listen(this.updateSigninStatus.bind(this));
                   this.setSignInListeners();
                   // Handle the initial sign-in state.
                   this.updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
@@ -242,7 +281,7 @@
         
                 const content = files.reduce((list, file) => list += `<li> ${file.name} </li>`, '<ul>');
         
-                this.contentContainer.innerHTML = `${content}</ul>`;
+                this.contentContainer.innerHTML = `<p>Files:</p>${content}</ul>`;
         
               };
         
