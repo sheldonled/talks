@@ -96,7 +96,7 @@
             <li class="fragment">Take a look at the
               <a href="https://developers.google.com/drive/" target="_blank">Google Developers Portal</a>
             </li>
-            <li class="fragment">Do the 
+            <li class="fragment">Do the
               <a href="https://developers.google.com/drive/v3/web/quickstart/js" target="_blank">Quickstart in your language of choice</a>
             </li>
           </ul>
@@ -107,14 +107,29 @@
             Uploading files to
             <a href="https://drive.google.com/drive/folders/1LYS8YFGIYVh4H1JXUgUghgxkljzUnKld" target="_blank">public folder on Google Drive</a>
           </p>
+          <small>Check this at:
+            <a href="https://gdrive-api-quickstart.glitch.me/" target="_blank">https://gdrive-api-quickstart.glitch.me</a>
+          </small>
           <!-- styles for live demo -->
           <style>
-            #content {
+            .app {
+              width: 100%;
               min-height: 50vh;
             }
-            #authorize-button,
-            #signout-button,
-            #upload-button {
+
+            .app__folder-content {
+              font-size: 1.5rem !important;
+
+            }
+
+            #upload-form {
+              margin: 2rem 0;
+              padding: 2rem;
+              border: 1px solid #085130;
+              display: none;
+            }
+
+            .app__button {
               border-radius: .315rem;
               background-color: #09A960;
               padding: .5rem;
@@ -122,52 +137,56 @@
               margin: 0 auto;
               color: #fff;
               cursor: pointer;
-              box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,0.2);
+              box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
               border: 1px solid #085130;
               height: 2rem;
-              display: block;
+              display: none;
             }
-            #signout-button {
+
+            .app__button--signout {
               background-color: #408CD9;
             }
-            #upload-file,
-            #upload-text {
+
+            .app__button--upload {
+              display: block;
+            }
+
+            .upload-form__input {
               border: 1px solid #09A960;
               height: 2rem;
               width: 20rem;
-              margin: 0 0 0 2rem;
+              margin: 0 0 0 1rem;
             }
-            label {
+
+            .upload-form__label {
               display: flex;
               justify-content: flex-end;
               width: 100%;
-            }
-            #upload-form {
-              margin: 2rem 0;
-              padding: 2rem;
-              border: 1px solid #085130;
+              margin: .5rem 0;
             }
           </style>
-          <!-- Add buttons to initiate auth sequence and sign out -->
-          <button id="authorize-button" style="display: none;">Authorize</button>
-          <button id="signout-button" style="display: none;">Sign Out</button>
-        
-          <!-- Form to upload files -->
-          <form id="upload-form" style="display: none;">
-            <label for="upload-file">
-              <span>Upload from the computer:</span>
-              <input id="upload-file" type="file">
-            </label>
-            <label for="upload-text">
-              <span>Upload from url:</span>
-              <input id="upload-text" type="text">
-            </label>
-            <button id="upload-button" type="button">Upload</button>
-          </form>
-        
-          <!-- Content div to show list of files -->
-          <div id="content"></div>
-        
+          <div class="app">
+            <!-- Add buttons to initiate auth sequence and sign out -->
+            <button class="app__button app__button--authorize js-authorize-button">Authorize</button>
+            <button class="app__button app__button--signout js-signout-button">Sign Out</button>
+
+            <!-- Form to upload files -->
+            <form id="upload-form" class="upload-form js-upload-form">
+              <label for="upload-file" class="upload-form__label">
+                <span>Upload from the computer:</span>
+                <input id="upload-file" type="file" class="upload-form__input js-upload-file">
+              </label>
+              <label for="upload-text" class="upload-form__label">
+                <span>Upload from url:</span>
+                <input id="upload-text" type="text" class="upload-form__input js-upload-text">
+              </label>
+              <button id="upload-button" type="button" class="app__button app__button--upload js-upload-button">Upload</button>
+            </form>
+
+            <!-- Content div to show list of files -->
+            <div class="app__folder-content js-folder-content"></div>
+          </div>
+
           <script type="text/javascript">
             class QuickStart {
               constructor() {
@@ -176,27 +195,28 @@
                 this.API_KEY = 'AIzaSyDlqgz4EKBA7mqxlHGB8Rbo7sIk40BOksA';
                 // Authorization scopes required by the API
                 this.SCOPES = 'https://www.googleapis.com/auth/drive.file';
-        
+
                 //The folder to work with
                 this.FOLDER_ID = '1LYS8YFGIYVh4H1JXUgUghgxkljzUnKld';
-        
-                //sign-in state buttons
-                this.authorizeButton = document.querySelector('#authorize-button');
-                this.signoutButton = document.querySelector('#signout-button');
-                this.uploadForm = document.querySelector('#upload-form');
-                this.uploadInputFile = document.querySelector('#upload-file');
-                this.uploadInputText = document.querySelector('#upload-text');
-                this.uploadButton = document.querySelector('#upload-button');
-                this.contentContainer = document.querySelector('#content');
+
+                //DOM Elements
+                this.authorizeButton = document.querySelector('.js-authorize-button');
+                this.signoutButton = document.querySelector('.js-signout-button');
+                this.uploadForm = document.querySelector('.js-upload-form');
+                this.uploadInputFile = document.querySelector('.js-upload-file');
+                this.uploadInputText = document.querySelector('.js-upload-text');
+                this.uploadButton = document.querySelector('.js-upload-button');
+                this.uploadFolder = document.querySelector('.js-upload-folder');
+                this.folderContent = document.querySelector('.js-folder-content');
               };
-        
+
               /**
                *  On load, called to load the auth2 library and API client library.
                */
               handleClientLoad() {
                 gapi.load('client:auth2', () => gapi.client.load('drive', 'v3', this.initClient.bind(this)));
               };
-        
+
               /**
                *  Initializes the API client library and sets up sign-in state listeners.
                */
@@ -213,22 +233,23 @@
                   this.updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
                 });
               };
-        
-              //Sets up sign-in state listeners.
+
+              //Sets up click listeners.
               setSignInListeners() {
                 document.addEventListener('click', evt => {
-                  if (evt.target.id === this.authorizeButton.id)
+                  console.log(evt.target.className);
+                  if (evt.target.className === this.authorizeButton.className)
                     gapi.auth2.getAuthInstance().signIn();
-        
-                  if (evt.target.id === this.signoutButton.id)
+
+                  if (evt.target.className === this.signoutButton.className)
                     gapi.auth2.getAuthInstance().signOut();
-        
-                  if (evt.target.id === this.uploadButton.id)
+
+                  if (evt.target.className === this.uploadButton.className)
                     this.uploadFile();
-        
+
                 });
               };
-        
+
               /**
                *  Called when the signed in status changes, to update the UI
                *  appropriately. After a sign-in, the API is called.
@@ -237,17 +258,20 @@
                 this.authorizeButton.style.display = isSignedIn ? 'none' : 'block';
                 this.signoutButton.style.display = isSignedIn ? 'block' : 'none';
                 this.uploadForm.style.display = isSignedIn ? 'block' : 'none';
-        
-                if (!isSignedIn) return;
+
+                if (!isSignedIn) {
+                  this.folderContent.innerHTML = '';
+                  return;
+                }
                 this.getAllFiles();
               };
-        
+
               /**
                * Gets all files from the folder ID
                */
               getAllFiles(request, result) {
                 const query = `'${this.FOLDER_ID}' in parents and (trashed != true)`;
-        
+
                 if (!request) {
                   this.getAllFiles(gapi.client.request({
                     'path': '/drive/v3/files',
@@ -256,7 +280,7 @@
                   }), []);
                   return;
                 }
-        
+
                 request.execute(resp => {
                   result = result.concat(resp.files);
                   let nextPageToken = resp.nextPageToken;
@@ -264,7 +288,7 @@
                     this.renderFileList(result);
                     return;
                   }
-        
+
                   this.getAllFiles(gapi.client.request({
                     'path': '/drive/v3/files',
                     'method': 'GET',
@@ -272,64 +296,64 @@
                   }), result);
                 });
               };
-        
+
               renderFileList(files) {
                 if (files.length === 0) {
-                  this.contentContainer.innerHTML = "<p><strong>The folder is Empty</strong></p>";
+                  this.folderContent.innerHTML = "<p><strong>The folder is Empty</strong></p>";
                   return;
                 }
-        
+
                 const content = files.reduce((list, file) => list += `<li> ${file.name} </li>`, '<ul>');
-        
-                this.contentContainer.innerHTML = `<p>Files:</p>${content}</ul>`;
-        
+
+                this.folderContent.innerHTML = `<p>Files:</p>${content}</ul>`;
+
               };
-        
+
               uploadFile() {
                 if (this.uploadInputFile.files[0])
                   this.uploadFromComputer();
                 else
                   this.uploadFromUrl();
-        
+
                 this.uploadForm.reset();
               };
-        
+
               uploadFromComputer() {
                 const file = this.uploadInputFile.files[0];
                 this.readFileAndSendToGoogleDrive(file, file);
               };
-        
+
               uploadFromUrl() {
                 const url = this.uploadInputText.value,
-                      urlParts = url.split("/"),
-                      fileInfo = {
-                        name: decodeURIComponent(urlParts[urlParts.length-1])
-                      };
-        
+                  urlParts = url.split("/"),
+                  fileInfo = {
+                    name: decodeURIComponent(urlParts[urlParts.length - 1])
+                  };
+
                 fetch(url).then(response => {
-                  if(response.ok) return response.blob();
+                  if (response.ok) return response.blob();
                   throw new Error('Network response was not ok.');
                 }).then(myBlob => {
                   fileInfo.type = myBlob.type;
                   this.readFileAndSendToGoogleDrive(myBlob, fileInfo);
                 });
               };
-        
+
               readFileAndSendToGoogleDrive(file, fileInfo) {
-                  const filereader = new FileReader();
-                  filereader.onloadend = event => this.sendFileToGoogleDrive(event, fileInfo);
-                  filereader.readAsBinaryString(file);
+                const filereader = new FileReader();
+                filereader.onloadend = event => this.sendFileToGoogleDrive(event, fileInfo);
+                filereader.readAsBinaryString(file);
               }
-        
+
               sendFileToGoogleDrive(event, file) {
                 const base64Data = btoa(event.target.result),
-                      boundary = '-whatever-you-want-',
-                      fileMetadata = {
-                        'name': file.name,
-                        'mimeType': file.type,
-                        'parents': [this.FOLDER_ID]
-                      };
-        
+                  boundary = '-whatever-you-want-',
+                  fileMetadata = {
+                    'name': file.name,
+                    'mimeType': file.type,
+                    'parents': [this.FOLDER_ID]
+                  };
+
                 gapi.client.request({
                   'path': '/upload/drive/v3/files',
                   'method': 'POST',
@@ -351,11 +375,11 @@
                 })
                   .execute(file => this.getAllFiles());
               };
-        
+
             };
             const quickstart = new QuickStart();
           </script>
-        
+
           <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};quickstart.handleClientLoad()"
             onreadystatechange="if (this.readyState === 'complete') this.onload()">
             </script>
