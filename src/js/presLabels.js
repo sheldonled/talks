@@ -7,6 +7,14 @@ export default {
     "en": "Presentation",
     "pt-BR": "Palestra",
   },
+  "demo": {
+    "en": "Check Demo/Project",
+    "pt-BR": "Veja Demo/Projeto",
+  },
+  "video": {
+    "en": "Watch video",
+    "pt-BR": "Assista ao vídeo",
+  },
   "article": {
     "en": "Read article",
     "pt-BR": "Leia o artigo",

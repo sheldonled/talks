@@ -531,6 +531,14 @@
       "en": "Presentation",
       "pt-BR": "Palestra",
     },
+    "demo": {
+      "en": "Check Demo/Project",
+      "pt-BR": "Veja Demo/Projeto",
+    },
+    "video": {
+      "en": "Watch video",
+      "pt-BR": "Assista ao vídeo",
+    },
     "article": {
       "en": "Read article",
       "pt-BR": "Leia o artigo",
@@ -600,6 +608,32 @@
     return yearsObj;
   }, {}));
 
+  const getPresentationActions = (talk, locale) => `
+  ${(talk.demo) ? `<span class="talk__article"><a href="${talk.demo}" target="_blank">${labels.demo[locale]}</a></span>` : ``}
+  ${(talk.video) ? `<span class="talk__article"><a href="${talk.video}" target="_blank">${labels.video[locale]}</a></span>` : ``}
+  ${(talk.article) ? `<span class="talk__article"><a href="${talk.article}" target="_blank">${labels.article[locale]}</a></span>` : ``}
+  ${(talk.description[locale]) ? `<button class="talk__showdesc" type="button">${labels.showDesc[locale]}</button>` : ``}
+`;
+
+  const getPresentationTemplate = talk => {
+    let locale = Object.keys(talk.description).find(d => d === document.documentElement.lang) || "en";
+    let [talkYear, talkMonth, talkDay] = talk.date.split("-");
+    return `
+  <header class="talk__header">
+    <h3 class="talk__title">${talk.conference}</h3>
+    <section class="talk__details">
+      <span class="talk__date">${labels.month[parseInt(talkMonth)][locale]}, ${talkDay}. ${talkYear}</span>
+      <span class="talk__venue"><strong>${labels.venue[locale]}:</strong> ${talk.venue}</span>
+      <span class="talk__presentation"><strong>${labels.presentation[locale]}:</strong> ${(talk.presentation) ? `<a href="${talk.presentation}" target="_blank">${talk.title}</a>` : talk.title}</span>
+      <section class="talk__actions">
+      ${getPresentationActions(talk, locale)}
+      </section>
+    </section>
+  </header>
+  ${(talk.description[locale]) ? `<section class="talk__description">${talk.description[locale]}</section>` : ``}
+  `;
+  };
+
   const loadPresentations = () => {
     const talksContainer = document.querySelector(".site-talks");
     if(!talksContainer) return;
@@ -618,25 +652,9 @@
       yearSection.appendChild(yearTitle);
 
       presentationsByYear[year].forEach(talk => {
-        let locale = Object.keys(talk.description).find(d => d === document.documentElement.lang) || "en";
-        let [talkYear, talkMonth, talkDay] = talk.date.split("-");
         const article = document.createElement('article');
         article.classList.add("site-talks__item");
-        article.innerHTML = `
-      <header class="talk__header">
-        <h3 class="talk__title">${talk.conference}</h3>
-        <section class="talk__details">
-          <span class="talk__date">${labels.month[parseInt(talkMonth)][locale]}, ${talkDay}. ${talkYear}</span>
-          <span class="talk__venue"><strong>${labels.venue[locale]}:</strong> ${talk.venue}</span>
-          <span class="talk__presentation"><strong>${labels.presentation[locale]}:</strong> ${(talk.presentation) ? `<a href="${talk.presentation}" target="_blank">${talk.title}</a>` : talk.title}</span>
-          <section class="talk__actions">
-            ${(talk.article) ? `<span class="talk__article"><a href="${talk.article}" target="_blank">${labels.article[locale]}</a></span>` : ``}
-            ${(talk.description[locale]) ? `<button class="talk__showdesc" type="button">${labels.showDesc[locale]}</button>` : ``}
-          </section>
-        </section>
-      </header>
-      ${(talk.description[locale]) ? `<section class="talk__description">${talk.description[locale]}</section>` : ``}
-      `;
+        article.innerHTML = getPresentationTemplate(talk);
         yearSection.appendChild(article);
       });
       talksContainer.appendChild(yearSection);
