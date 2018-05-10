@@ -1,5 +1,19 @@
 export default [
   {
+    "date": "2018-05-09",
+    "conference": "DublinJS Lightning Talks",
+    "venue": "Dogpatch Labs, Dublin, Ireland",
+    "title": "Getting Started with Google Drive API",
+    "presentation": "http://github.sheldonled.com/talks/p/gdrive-lightning.html",
+    "article": "",
+    "video": "https://www.youtube.com/watch?v=zW62srSHFoY",
+    "description": {
+      "en": `<p>One of the most famous Google services is Google Drive and you can use it in your application through its API. In this lightning talk we're going to briefly dive into it and see how easy it is to get started..</p>`,
+
+      "pt-BR": `<p>Um dos serviços mais famosos do Google é o Google Drive, e você pode usá-lo em sua aplicação através de sua API. Nesta rápida palestra vamos dar uma breve olhada nessa API e ver o quão fácil é para começar a usá-la</p>`,
+    },
+  },
+  {
     "date": "2017-12-18",
     "conference": "Technical Show & Tell",
     "venue": "Smartbox Group, Dublin, Ireland",
