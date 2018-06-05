@@ -1,5 +1,18 @@
 export default [
   {
+    "date": "2018-06-05",
+    "conference": "DublinJS June Meetup",
+    "venue": "Intercom, Dublin, Ireland",
+    "title": "Improving performance with CSS Grid, PWA, and a few other things",
+    "presentation": "http://github.sheldonled.com/talks/p/performance-grid-pwa.html",
+    "article": "",
+    "description": {
+      "en": `<p>As web developers we’re constantly seeking ways to mitigate the network friction and deliver web applications faster, but there’s much more to be done to improve user’s experience on the web. This talk shows how to use what’s new on the web to get your web app even faster.</p>`,
+
+      "pt-BR": `<p>Como desenvolvedores web, nós estamos constantemente procurando maneiras de mitigar a frição na rede e entregar aplicações web mais rápidas, mas existe muito mais a ser feito para melhorar a experiência do usuário na web. Esta palestra mostra como utilizar o que há de novo na web para deixar sua web app ainda mais rápida.</p>`,
+    },
+  },
+  {
     "date": "2018-05-09",
     "conference": "DublinJS Lightning Talks",
     "venue": "Dogpatch Labs, Dublin, Ireland",
@@ -8,7 +21,7 @@ export default [
     "article": "",
     "video": "https://www.youtube.com/watch?v=zW62srSHFoY",
     "description": {
-      "en": `<p>One of the most famous Google services is Google Drive and you can use it in your application through its API. In this lightning talk we're going to briefly dive into it and see how easy it is to get started..</p>`,
+      "en": `<p>One of the most famous Google services is Google Drive and you can use it in your application through its API. In this lightning talk we're going to briefly dive into it and see how easy it is to get started.</p>`,
 
       "pt-BR": `<p>Um dos serviços mais famosos do Google é o Google Drive, e você pode usá-lo em sua aplicação através de sua API. Nesta rápida palestra vamos dar uma breve olhada nessa API e ver o quão fácil é para começar a usá-la</p>`,
     },
