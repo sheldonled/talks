@@ -3,6 +3,20 @@
 
   var presentations = [
     {
+      "date": "2018-09-28",
+      "conference": "SymfonyLive - London",
+      "venue": "Park Plaza Westminster Bridge Hotel",
+      "title": "Application Frontend Decoupling",
+      "presentation": "https://docs.google.com/presentation/d/1ITM1YGYVCcEutLd0DLu1r2Ns4Dq59F2cB9clQH0OgSM",
+      "article": "",
+      "video": "",
+      "description": {
+        "en": `<p>As frontend gets more and more complex, having it tied to the backend  might not be the best solution nowadays. This talk gives an overview about a possible solution to have the frontend of your application served decoupled from the backend, what are the benefits, and how to implement.</p>`,
+
+        "pt-BR": `<p>Como Frontend está ficando cada vez mais complexo, tê-lo amarrado ao backend pode não ser a melhor solução hoje em dia. Essa mini-palestra dá uma visão geral sobre uma possível solução para ter o Frontend de sua aplicação desacoplado do backend, quais são os benefícios, e como implementar.</p>`,
+      },
+    },
+    {
       "date": "2018-06-05",
       "conference": "DublinJS June Meetup",
       "venue": "Intercom, Dublin, Ireland",
