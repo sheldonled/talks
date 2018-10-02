@@ -4,7 +4,7 @@
   "description": "Sheldon Led's talks repo",
   "main": "index.js",
   "scripts": {
-    "task": "node taskrunner/index.js",
+    "task": "babel-node --only taskrunner.js,./src,./node_modules/taskrunner  taskrunner.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,12 +18,14 @@
   },
   "homepage": "https://github.com/sheldonled/talks#readme",
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.46",
-    "@babel/preset-env": "^7.0.0-beta.46",
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/node": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
     "eslint": "^4.19.1",
     "node-sass": "^4.9.0",
     "rollup": "^0.57.1",
     "sass-lint": "^1.12.1",
+    "taskrunner": "git+https://github.com/sheldonled/taskrunner.git",
     "uglify-es": "^3.3.9"
   }
 }
