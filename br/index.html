@@ -14,12 +14,12 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Sheldon Led"/>
   <meta property="og:site_name" content="Sheldon Led"/>
-  <meta property="og:url" content="http://sheldonled.com"/>
-  <meta property="og:image" content="http://sheldonled.com/img/sheldonled-profilephoto.jpg"/>
+  <meta property="og:url" content="https://sheldonled.com"/>
+  <meta property="og:image" content="https://sheldonled.com/img/sheldonled-profilephoto.jpg"/>
   <meta property="og:type" content="blog"/>
   <meta property="og:description" content="Sheldon Led's personal web site."/>
   <!-- Style -->
-  <link href="../dist/css/app.css?281020181709" rel="stylesheet" type="text/css" media="all" />
+  <link href="../dist/css/app.css?010120190000" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
   <section class="top-pannel">
@@ -79,7 +79,7 @@
       </a>
     </section>
     <section class="site-footer__message">
-      <p>Sheldon Led | 2018</p>
+      <p><a href="https://sheldonled.com/br">Sheldon Led</a> | 2019</p>
     </section>
   </footer>
   <!-- SCRIPTS Go here -->
@@ -88,12 +88,12 @@
     (function(w){var loadJS=function(src,cb){"use strict";var ref=w.document.querySelector("script");var script=w.document.createElement("script");script.src=src;script.async=true;ref.parentNode.insertBefore(script,ref);if(cb&&typeof cb==="function"){script.onload=cb}return script};w.loadJS=loadJS})(window);
     function supportEs6() {"use strict";try { eval("let foo = (x)=>x+1"); }catch (e) { return false; }return true;}
     if(supportEs6()) {
-      loadJS("../dist/js/app.min.js?281020181709");
+      loadJS("../dist/js/app.min.js?010120190000");
     } else {
       //strategy for old browsers
       loadJS("https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.find",function(){
-        loadJS("../lib/svgxuse.min.js?281020181709");
-        loadJS("../dist/js/es5app.min.js?281020181709");
+        loadJS("../lib/svgxuse.min.js?010120190000");
+        loadJS("../dist/js/es5app.min.js?010120190000");
       });
     }
     /* load Google Analytics */

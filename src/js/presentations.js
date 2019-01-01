@@ -18,7 +18,7 @@ export default [
     "conference": "DublinJS June Meetup",
     "venue": "Intercom, Dublin, Ireland",
     "title": "Improving performance with CSS Grid, PWA, and a few other things",
-    "presentation": "http://github.sheldonled.com/talks/p/performance-grid-pwa.html",
+    "presentation": "https://github.sheldonled.com/talks/p/performance-grid-pwa.html",
     "article": "",
     "description": {
       "en": `<p>As web developers we’re constantly seeking ways to mitigate the network friction and deliver web applications faster, but there’s much more to be done to improve user’s experience on the web. This talk shows how to use what’s new on the web to get your web app even faster.</p>`,
@@ -31,7 +31,7 @@ export default [
     "conference": "DublinJS Lightning Talks",
     "venue": "Dogpatch Labs, Dublin, Ireland",
     "title": "Getting Started with Google Drive API",
-    "presentation": "http://github.sheldonled.com/talks/p/gdrive-lightning.html",
+    "presentation": "https://github.sheldonled.com/talks/p/gdrive-lightning.html",
     "article": "",
     "video": "https://www.youtube.com/watch?v=zW62srSHFoY",
     "description": {
@@ -45,7 +45,7 @@ export default [
     "conference": "Technical Show & Tell",
     "venue": "Smartbox Group, Dublin, Ireland",
     "title": "How web performance, CSS Grid and PWA are related",
-    "presentation": "http://github.sheldonled.com/talks/p/grid-pwa-performance.html",
+    "presentation": "https://github.sheldonled.com/talks/p/grid-pwa-performance.html",
     "article": "https://medium.com/@sheldonled/how-web-performance-css-grid-and-pwa-are-related-873c68f385a9",
     "video": "",
     "description": {
@@ -59,7 +59,7 @@ export default [
     "conference": "Semana da inovação, Ciência e Computação",
     "venue": "IFG, Uruaçu, Brazil",
     "title": "Mozilla connected devices.",
-    "presentation": "http://github.sheldonled.com/talks/p/conndev.html",
+    "presentation": "https://github.sheldonled.com/talks/p/conndev.html",
     "article": "",
     "video": "",
     "description": {
@@ -74,7 +74,7 @@ export default [
     "conference": "TIVASP",
     "venue": "UEG, Ceres, Brazil",
     "title": "Mozilla connected devices.",
-    "presentation": "http://github.sheldonled.com/talks/p/conndev.html",
+    "presentation": "https://github.sheldonled.com/talks/p/conndev.html",
     "article": "",
     "video": "",
     "description": {
@@ -89,7 +89,7 @@ export default [
     "conference": "Software Freedom Day - Brasília",
     "venue": "Faculdade Projeção, Brasília, Brazil",
     "title": "How to contribute with Mozilla.",
-    "presentation": "http://github.sheldonled.com/talks/p/mozcontribute.html",
+    "presentation": "https://github.sheldonled.com/talks/p/mozcontribute.html",
     "article": "https://medium.com/@sheldonled/volunteering-with-mozilla-20737756d439",
     "video": "",
     "description": {
@@ -104,7 +104,7 @@ export default [
     "conference": "17 FISL (Festival Internacional de Software Livre)",
     "venue": "PUC RS, Porto Alegre, Brazil",
     "title": "15 maneiras de ganhar dinheiro com software livre",
-    "presentation": "http://github.sheldonled.com/talks/p/15waysfs.html",
+    "presentation": "https://github.sheldonled.com/talks/p/15waysfs.html",
     "article": "",
     "video": "",
     "description": {
@@ -118,7 +118,7 @@ export default [
     "conference": "joinCommunity",
     "venue": "FATESG/SENAI, Goiânia, Brazil",
     "title": "Google Drive API.",
-    "presentation": "http://github.sheldonled.com/talks/p/gdrive-easydg.html",
+    "presentation": "https://github.sheldonled.com/talks/p/gdrive-easydg.html",
     "article": "",
     "video": "",
     "description": {
@@ -132,7 +132,7 @@ export default [
     "conference": "FLISOL Goiânia",
     "venue": "FATESG/SENAI, Goiânia, Brazil",
     "title": "15 maneiras de ganhar dinheiro com software livre",
-    "presentation": "http://github.sheldonled.com/talks/p/15maneirassl.html",
+    "presentation": "https://github.sheldonled.com/talks/p/15maneirassl.html",
     "article": "",
     "video": "",
     "description": {
@@ -146,7 +146,7 @@ export default [
     "conference": "FLISOL Goiânia",
     "venue": "Faculdade Alfa, Goiânia, Brazil",
     "title": "15 maneiras de ganhar dinheiro com software livre",
-    "presentation": "http://github.sheldonled.com/talks/p/15maneirassl.html",
+    "presentation": "https://github.sheldonled.com/talks/p/15maneirassl.html",
     "article": "",
     "video": "",
     "description": {
@@ -160,7 +160,7 @@ export default [
     "conference": "FLISOL Anápolis",
     "venue": "Faculdade Alfa, Goiânia, Brazil",
     "title": "Desenvolvendo aplicativos para Firefox OS.",
-    "presentation": "http://github.sheldonled.com/talks/p/firefoxos.html",
+    "presentation": "https://github.sheldonled.com/talks/p/firefoxos.html",
     "article": "",
     "video": "",
     "description": {
@@ -174,7 +174,7 @@ export default [
     "conference": "FLISOL Goiânia",
     "venue": "Faculdade Alfa, Goiânia, Brazil",
     "title": "Desenvolvendo aplicativos para Firefox OS.",
-    "presentation": "http://github.sheldonled.com/talks/p/firefoxos.html",
+    "presentation": "https://github.sheldonled.com/talks/p/firefoxos.html",
     "article": "",
     "video": "",
     "description": {
@@ -188,7 +188,7 @@ export default [
     "conference": "ENATI",
     "venue": "Faculdade Alfa, Goiânia, Brazil",
     "title": "Firefox OS Workshop (8h).",
-    "presentation": "http://github.sheldonled.com/talks/p/firefoxos.html",
+    "presentation": "https://github.sheldonled.com/talks/p/firefoxos.html",
     "article": "",
     "video": "",
     "description": {
@@ -218,7 +218,7 @@ export default [
     "conference": "IX Semana Tecnológica do Curso Superior de Tecnologia em Redes de Computadores",
     "venue": "UEG, Pires do Rio, Brazil",
     "title": "2014 - 14 maneiras de ganhar dinheiro com Software Livre.",
-    "presentation": "http://github.sheldonled.com/talks/p/15maneirassl.html",
+    "presentation": "https://github.sheldonled.com/talks/p/15maneirassl.html",
     "article": "",
     "video": "",
     "description": {
@@ -232,7 +232,7 @@ export default [
     "conference": "joinCommunity",
     "venue": "Faculdade Senac, Goiânia, Brazil",
     "title": "Utilizando MongoDB em suas aplicações.",
-    "presentation": "http://github.sheldonled.com/talks/p/mongodb.html",
+    "presentation": "https://github.sheldonled.com/talks/p/mongodb.html",
     "article": "",
     "video": "",
     "description": {
@@ -246,7 +246,7 @@ export default [
     "conference": "FLISOL Goiânia",
     "venue": "UFG, Goiânia, Brazil",
     "title": "2014 - 14 maneiras de ganhar dinheiro com Software Livre.",
-    "presentation": "http://github.sheldonled.com/talks/p/15maneirassl.html",
+    "presentation": "https://github.sheldonled.com/talks/p/15maneirassl.html",
     "article": "",
     "video": "",
     "description": {
@@ -260,7 +260,7 @@ export default [
     "conference": "FLISOL Goiânia",
     "venue": "UFG, Goiânia, Brazil",
     "title": "Utilizando MongoDB em suas aplicações.",
-    "presentation": "http://github.sheldonled.com/talks/p/mongodb.html",
+    "presentation": "https://github.sheldonled.com/talks/p/mongodb.html",
     "article": "",
     "video": "",
     "description": {
@@ -287,7 +287,7 @@ export default [
     "conference": "Presentation for Information Systems Students",
     "venue": "Faculdade Alfa, Goiânia, Brazil",
     "title": "Exploring the Web Mobile.",
-    "presentation": "http://github.sheldonled.com/talks/p/webmobile.html",
+    "presentation": "https://github.sheldonled.com/talks/p/webmobile.html",
     "description": {
       "en": `<p>In the last couple of years the web access via mobile has grown a lot. The web also has evolved a lot and brings several resources that make its usage more friendly. The aim of this presentation is to show a few tips for web development, thinking more about people who access it via mobile devices, and also show a few ways of building apps using only web technologies.</p>`,
 
@@ -299,7 +299,7 @@ export default [
     "conference": "joinCommunity",
     "venue": "FASAM, Goiânia, Brazil",
     "title": "Entendendo a arquitetura de um Documento web.",
-    "presentation": "http://github.sheldonled.com/talks/p/dom.html",
+    "presentation": "https://github.sheldonled.com/talks/p/dom.html",
     "article": "",
     "video": "",
     "description": {
@@ -314,7 +314,7 @@ export default [
     "venue": "IFG, Ipora, Brazil",
     "title": "Joomla Workshop (4h).",
     "presentation": "https://www.slideshare.net/sheldonled/intro-joomlaminicurso",
-    "article": "http://sheldonled.com/pdf/intro-joomla.pdf",
+    "article": "https://sheldonled.com/pdf/intro-joomla.pdf",
     "video": "",
     "description": {
       "en": ``,
@@ -327,7 +327,7 @@ export default [
     "venue": "IFG, Ipora, Brazil",
     "title": "PHP Workshop (4h).",
     "presentation": "",
-    "article": "http://sheldonled.com/pdf/intro-php.pdf",
+    "article": "https://sheldonled.com/pdf/intro-php.pdf",
     "video": "",
     "description": {
       "en": ``,
@@ -339,7 +339,7 @@ export default [
     "conference": "FLISOL Goiânia",
     "venue": "Faculdade Alfa, Goiânia, Brazil",
     "title": "2013 - 13 Maneiras de Ganhar dinheiro com Software Livre.",
-    "presentation": "http://github.sheldonled.com/talks/p/15maneirassl.html",
+    "presentation": "https://github.sheldonled.com/talks/p/15maneirassl.html",
     "article": "",
     "video": "",
     "description": {
@@ -352,8 +352,8 @@ export default [
     "conference": "9 FGSL",
     "venue": "IFG, Goiânia, Brazil",
     "title": "Gerenciando projetos com dotProject.",
-    "presentation": "http://github.sheldonled.com/talks/p/dotProject-slide.pdf",
-    "article": "http://github.sheldonled.com/talks/p/dotProject-artigo.pdf",
+    "presentation": "https://github.sheldonled.com/talks/p/dotProject-slide.pdf",
+    "article": "https://github.sheldonled.com/talks/p/dotProject-artigo.pdf",
     "video": "",
     "description": {
       "en": ``,
@@ -365,8 +365,8 @@ export default [
     "conference": "III Jornada Alfa de Tecnologia",
     "venue": "Faculdade Alfa, Goiânia, Brazil",
     "title": "Gerenciando projetos com dotProject.",
-    "presentation": "http://github.sheldonled.com/talks/p/dotProject-slide.pdf",
-    "article": "http://github.sheldonled.com/talks/p/dotProject-artigo.pdf",
+    "presentation": "https://github.sheldonled.com/talks/p/dotProject-slide.pdf",
+    "article": "https://github.sheldonled.com/talks/p/dotProject-artigo.pdf",
     "video": "",
     "description": {
       "en": ``,
