@@ -1,4 +1,5 @@
 {
+    "useEslintrc": false,
     "envs": ["browser"],
     "parserOptions": {
         "ecmaVersion": 6,

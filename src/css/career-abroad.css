@@ -1,0 +1,109 @@
+html:-webkit-full-screen-ancestor {
+  background-color: #fff;
+}
+
+ul li {
+  list-style-type: square;
+}
+
+.title-slide-pt h1 {
+  font-size: 2em;
+}
+
+.logo-alfa {
+  display: block;
+  float: right;
+}
+
+.about1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about1 .led {
+  width: 150px;
+  display: block;
+  margin-left: 1rem;
+}
+
+.reveal .title-list {
+  margin: -2rem 0;
+}
+
+.title-list__item {
+  display: flex;
+  align-items: center;
+}
+
+.title-list .title-list__item-icon {
+  position: relative;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  line-height: 4rem;
+  margin: .5rem 2rem;
+  border: 1rem solid #000;
+  border-radius: 50%;
+}
+
+.title-list .title-list__item-icon:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -70%;
+  left: 50%;
+  margin-left: -.5rem;
+  width: 1rem;
+  height: 2rem;
+  background-color: #000;
+}
+.title-list .title-list__item-icon--long:before {
+  height: 8rem;
+  top: -200%;
+}
+
+.title-list .title-list__item-text {
+  font-size: 3rem;
+}
+
+.journey1 p {
+  padding: 10% 15%;
+  color: #555;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.application-proccess ol { counter-reset: ap-item }
+.application-proccess li { display: block }
+.application-proccess li:before {
+  content: counters(ap-item, ".") ": ";
+  counter-increment: ap-item
+}
+.application-proccess ol ol {
+  font-size: 80%;
+}
+
+/* Icon */
+[class*='icon__'] {
+  display: inline-block;
+  fill: currentColor;
+  height: 1em;
+  stroke: currentColor;
+  stroke-width: 0;
+  width: 1em;
+}
+
+.reveal .mqv-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+.reveal .mqv-list__item img{
+  width: 20%;
+}

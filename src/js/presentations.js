@@ -1,5 +1,19 @@
 export default [
   {
+    "date": "2019-03-18",
+    "conference": "UniAlfa Internal Conference",
+    "venue": "UniAlfa - Perimetral Norte - Goiânia",
+    "title": "Career Abroad",
+    "presentation": "https://github.sheldonled.com/talks/p/career-abroad.html",
+    "article": "",
+    "video": "",
+    "description": {
+      "en": `<p>In 2016 I decided to move away from Brazil and develop new experiences abroad. I started a journey with the help of our lovely internet and landed a job in Ireland, in the beginning of 2017. This talk highlights some topics I found important during this journey and I hope it helps you on yours.</p>`,
+
+      "pt-BR": `<p>Em 2016 eu decidi mudar para fora do Brasil, e desenvolver novas experiências no exterior. Eu comecei essa jornada com a ajuda da nossa amada internet e consegui um emprego na Irlanda no começo de 2017. Essa palestra destaca alguns tópicos que eu achei importante durante essa jornada e eu espero que possa ajudar você na sua.</p>`,
+    },
+  },
+  {
     "date": "2018-09-28",
     "conference": "SymfonyLive - London",
     "venue": "Park Plaza Westminster Bridge Hotel",
