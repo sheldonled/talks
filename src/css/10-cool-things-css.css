@@ -1,0 +1,126 @@
+.reveal .presentation-title {
+  font-size: 3.5rem;
+}
+
+.reveal section [class*='not-all-brazilians'] {
+  margin: 0;
+  box-shadow: none;
+  border: none;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 2rem;
+  width: 30%;
+  max-height: none;
+  background-size: cover;
+}
+.reveal section .not-all-brazilians-1 {
+  left: 0;
+  background-image: url(../../img/beach.jpg);
+}
+.reveal section .not-all-brazilians-2 {
+  left: 35%;
+  background-image: url(../../img/football-neymar.jpg);
+}
+.reveal section .not-all-brazilians-3 {
+  left: 70%;
+  background-image: url(../../img/carnival.jpg);
+}
+.reveal section .beer-lover {
+  position: relative;
+  margin: 0;
+  box-shadow: none;
+  border: none;
+  display: block;
+  width: 100%;
+  max-width: none;
+  z-index: 1;
+}
+
+
+.reveal section .sbx-logo,
+.reveal section .sbx-career-link {
+  background: #fff;
+  display: block;
+  width: 50%;
+  min-width: 20rem;
+  border: 0;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+.dublincss img {
+  width: 100%;
+}
+.dublincss a {
+  color: #fff;
+}
+
+
+.reveal section.web-performance-network .perf1 {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  transform: rotate(-25deg);
+}
+.reveal section.web-performance-network .perf2 {
+  position: absolute;
+  top: 120%;
+  left: 10%;
+  transform: rotate(15deg);
+}
+.reveal section.web-performance-network .perf3 {
+  position: absolute;
+  top: 170%;
+  left: 70%;
+  transform: rotate(-5deg);
+}
+.reveal section.web-performance-network .perf4 {
+  position: absolute;
+  top: -70%;
+  left: 50%;
+  transform: rotate(7deg);
+}
+.reveal section.web-performance-network .perf5 {
+  position: absolute;
+  top: 185%;
+  left: 35%;
+  transform: rotate(-10deg);
+}
+.reveal section.web-performance-network .perf6 {
+  position: absolute;
+  color: #2bb5d2;
+  top: 60%;
+  left: 60%;
+}
+
+
+.conclusion span,
+.conclusion strong {
+  color: #009988;
+  font-weight: bold;
+}
+
+
+.thanks .talk-article a {
+  color: #009988;
+  font-size: .8em;
+}
+
+.reveal section.fire-slide {
+  text-align: left;
+  width: 20%;
+  min-width: 20rem;
+  margin: 0 auto;left: 50%;
+  transform: translateX(-50%);
+}
+/* Icon */
+[class*='icon__'] {
+  display: inline-block;
+  fill: currentColor;
+  height: 1em;
+  stroke: currentColor;
+  stroke-width: 0;
+  width: 1em;
+}

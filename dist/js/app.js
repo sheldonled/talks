@@ -3,6 +3,20 @@
 
   var presentations = [
     {
+      "date": "2019-07-17",
+      "conference": "Dublin CSS meetup",
+      "venue": "Smartbox Group, Dublin, Ireland",
+      "title": "10 cool things you might not know about CSS",
+      "presentation": "https://github.sheldonled.com/talks/p/10-cool-things-css.html",
+      "article": "",
+      "video": "",
+      "description": {
+        "en": `<p>We can do awesome stuff on the web but styling has always been a challenge for the less experient with CSS. However the language has a lot of cool stuff and quircks that can be used to our advantage.</p>`,
+
+        "pt-BR": `<p>Nós podemos fazer coisas incríveis na web, mas dar estilo sempre foi um desafio para os menos experientes com CSS. Porém a linguagem tem várias coisas legais e peculiaridades que podem ser usadas em nosso favor.</p>`,
+      },
+    },
+    {
       "date": "2019-03-18",
       "conference": "UniAlfa Internal Conference",
       "venue": "UniAlfa - Perimetral Norte - Goiânia",

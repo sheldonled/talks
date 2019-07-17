@@ -19,7 +19,7 @@
   <meta property="og:type" content="blog"/>
   <meta property="og:description" content="Sheldon Led's personal web site."/>
   <!-- Style -->
-  <link href="../dist/css/app.css?180320191640" rel="stylesheet" type="text/css" media="all" />
+  <link href="../dist/css/app.css?170720191700" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
   <section class="top-pannel">
@@ -88,12 +88,12 @@
     (function(w){var loadJS=function(src,cb){"use strict";var ref=w.document.querySelector("script");var script=w.document.createElement("script");script.src=src;script.async=true;ref.parentNode.insertBefore(script,ref);if(cb&&typeof cb==="function"){script.onload=cb}return script};w.loadJS=loadJS})(window);
     function supportEs6() {"use strict";try { eval("let foo = (x)=>x+1"); }catch (e) { return false; }return true;}
     if(supportEs6()) {
-      loadJS("../dist/js/app.min.js?180320191640");
+      loadJS("../dist/js/app.min.js?170720191700");
     } else {
       //strategy for old browsers
       loadJS("https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.find",function(){
-        loadJS("../lib/svgxuse.min.js?180320191640");
-        loadJS("../dist/js/es5app.min.js?180320191640");
+        loadJS("../lib/svgxuse.min.js?170720191700");
+        loadJS("../dist/js/es5app.min.js?170720191700");
       });
     }
     /* load Google Analytics */
